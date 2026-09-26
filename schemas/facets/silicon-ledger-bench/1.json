@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/4rg0naut/silicon-ledger-bench/main/schemas/facets/silicon-ledger-bench/1.json",
+  "title": "silicon-ledger-bench facet, version 1",
+  "description": "Extension fields this corpus attaches to a Claim. OpenClaims permits arbitrary extension via `facets`, requiring only `_producer` and `_schemaURL`. This schema describes what this repository puts there, so a consumer can validate or index it without reading the suite. Field set is deliberately DISJOINT from the companion producer silicon-ledger (kind/topic/entities/caveat/split/legacy_confidence/evidence_status): a merged ledger must be filterable by facet key alone, so overlap would blur the instrument boundary. Reachability, stated honestly: this repository is public, so `_schemaURL` resolves. The companion producer silicon-ledger is private until publication; its URL (.../silicon-ledger/main/schemas/facets/silicon-ledger/1.json) therefore returns HTTP 404 today. That is declared, not asserted — the schema file is committed in that repo and the URL becomes live at publication; no facet data depends on URL reachability for local consumption, and the URL is a forward-pinned identifier, not evidence.",
+  "type": "object",
+  "required": [
+    "_producer",
+    "_schemaURL"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "_producer": {
+      "const": "silicon-ledger-bench",
+      "description": "Bare repository name, NOT a URN. Convention, pinned across both repositories: _producer is the producing repo's short name, so a reader can tell which instrument wrote a record without resolving anything. The companion instrument is silicon-ledger."
+    },
+    "_schemaURL": {
+      "type": "string",
+      "format": "uri",
+      "description": "Must resolve (this repo is public). A facet pointing at an unreachable schema is a dangling identifier, which is worse than omitting the facet."
+    },
+    "suite": {
+      "type": "string",
+      "enum": [
+        "s1_memory",
+        "s2_gemm",
+        "s3_ane_raw",
+        "s4_coreai",
+        "s5_coreml"
+      ],
+      "description": "Which suite of the instrument produced the record. The suite is the closest thing a raw-hardware measurement has to a 'kind': it fixes the method, the units, and the validation contract for every row under it."
+    },
+    "report": {
+      "type": "string",
+      "description": "The report file this record was extracted from (repo-relative path, e.g. examples/2026-09-26T02-14-33Z-bda452aabd60bf26.json). The report carries the full audit trail (per-run min/median/mean/p95, config, validation fields, section notes); the facet pins the pointer, the report carries the evidence."
+    },
+    "fingerprint": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{16}$",
+      "description": "Machine fingerprint (SHA-256 prefix over hardware identity, printed by `bench probe`). Cross-machine join key: two records with different fingerprints are different machines and must never be ranked against each other."
+    },
+    "window": {
+      "type": "string",
+      "enum": [
+        "unloaded-machine",
+        "in-session"
+      ],
+      "default": "unloaded-machine",
+      "description": "Honesty about contamination: 'unloaded-machine' means no other significant local work (especially no local AI inference) ran during the window; 'in-session' means an agentic session was active on the machine under test and the row may carry that load. A number without its window is a number without its conditions."
+    },
+    "validation": {
+      "type": "string",
+      "enum": [
+        "cpu-torch-validated",
+        "validation-failed",
+        "not-applicable"
+      ],
+      "description": "The suite's validation contract: every throughput row is only reported if a CPU/torch reference validated it first (rel_err/cosine alongside). 'validation-failed' rows exist to record that a number is NOT trustworthy, never to be read as a measurement. 'not-applicable' for latency floors and other rows with no numeric counterpart to validate."
+    },
+    "band": {
+      "type": "string",
+      "description": "Band label for bimodal measurements, e.g. 'low' vs 'warm' for CPU write/triad under external memory pressure (trap R9). A bimodal row without its band is a number that can differ by 2x for reasons the table cannot show."
+    },
+    "traps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "REPRODUCE.md cross-cutting traps that apply to this record (R8 silent zeros, R9 primer/power-allocation, R10 silent GPU fallback, R12 single weights entry, ...). Reading a row without its traps is how a documented finding gets re-read as hardware behaviour."
+    },
+    "known_trap": {
+      "type": "string",
+      "description": "A row-level trap label, e.g. 'self-reference-unsolved-v0' for pins that cannot be committed with their own digest (the record stores its source digest inside itself, so a commit-pinned digest is circular until the first tagged release). Declared, never asserted."
+    }
+  }
+}

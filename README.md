@@ -341,9 +341,13 @@ This suite was developed **AI-assisted** (OpenFox agentic harness driving a
 Claude-class model): code, measurement studies (docs/research-notes.md), and
 docs were authored in-session and verified by machine on real hardware.
 Commits touching AI-assisted work carry an `Assisted-by:` trailer. Conformance
-to the openclaims v0.1 machine-checkable format is planned for v0.1.x (the
-`claims` tool will emit a `silicon-ledger-bench` facet under
-`schemas/facets/silicon-ledger-bench/1.json`).
+to the openclaims v0.1 machine-checkable format is planned for v0.1.x. The
+facet schema is committed at
+`schemas/facets/silicon-ledger-bench/1.json` (field set disjoint from the
+companion producer `silicon-ledger`; its URL resolves because this repo is
+public, while the companion repo's facet URL 404s until that repo is
+published — declared, not asserted). The remaining piece is the `claims`
+tool that emits facet-annotated records.
 
 ## Attribution and license
 
