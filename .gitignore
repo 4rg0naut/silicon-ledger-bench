@@ -1,0 +1,10 @@
+.build/
+.swiftpm/
+results/
+models/
+tools/.venv/
+tools/pip_install.log
+.DS_Store
+*.o
+*.air
+*.metallib

@@ -1,0 +1,1916 @@
+{
+  "generated": "2026-09-26T02:14:33Z",
+  "machine": {
+    "ane": {
+      "ane_compiler_xpc": true,
+      "aned_daemon": true,
+      "coreai_framework": true,
+      "coreml_mlmodel": true,
+      "framework_loadable": true,
+      "inmemory_classes": true,
+      "request_class": true
+    },
+    "chip": "Apple M5 Max",
+    "cpuCores": {
+      "perflevel0": 6,
+      "perflevel1": 12,
+      "total": 18
+    },
+    "fingerprint": "bda452aabd60bf26",
+    "gpuCores": 40,
+    "gpuName": "Apple M5 Max",
+    "host": "mac-studio.local",
+    "memoryGB": 128,
+    "metalFamilies": [
+      "apple1",
+      "apple2",
+      "apple3",
+      "apple4",
+      "apple5",
+      "apple6",
+      "apple7",
+      "apple8",
+      "apple9",
+      "apple10"
+    ],
+    "metalTensor": {
+      "bf16": true,
+      "fp16": true,
+      "fp32": true,
+      "fp4e2m1": true,
+      "fp8e4m3": true,
+      "fp8e5m2": true,
+      "int4": true,
+      "int8": true
+    },
+    "model": "Mac Studio",
+    "osBuild": "26A428",
+    "osVersion": "27.0",
+    "tools": {
+      "aimodelc": "present",
+      "coreai-torch": "0.4.3",
+      "coremlc": "present",
+      "python": "Python 3.11.16",
+      "swift_clt": "Target: arm64-apple-macosx27.0.0",
+      "swift_xcode": "Target: arm64-apple-macosx27.0.0"
+    }
+  },
+  "schema": "silicon-ledger/1",
+  "sections": [
+    {
+      "id": "s1_memory",
+      "notes": [
+        "CPU: vDSP vectorized, one chunk per core. GPU: shared storage buffers, full DRAM traffic. Tensor: MTL4 encoder native tensor copy.",
+        "CPU timed in three 3s windows (median per window reported); pre-flight aborts if the SoC is busy so background daemons cannot contaminate a measurement.",
+        "GPU timed via Metal GPU timestamps (gpuEndTime-gpuStartTime, 8 dispatches/command buffer) to exclude CPU commit/wait overhead; a self-calibrating mixed CPU+GPU primer runs until measured GPU-copy bandwidth recovers to >=340 GB/s sustained over two consecutive windows (20-120s) so deep-idle processes converge to the same power state.",
+        "WARNING: GPU power-state primer hit 120s cap below sustained bandwidth (303 GB/s) \u2014 results may be low; rerun when idle"
+      ],
+      "runs": [
+        {
+          "config": {
+            "cores": "18"
+          },
+          "derived": {
+            "GBs": 273.5241447767848,
+            "p95_GBs": 272.16927828649284
+          },
+          "iters": 3,
+          "max": 1.9725625,
+          "mean": 1.9656180555555558,
+          "median": 1.9627916666666667,
+          "min": 1.9615,
+          "name": "cpu_read",
+          "p95": 1.9725625,
+          "unit": "GB/s",
+          "variant": "512MB"
+        },
+        {
+          "config": {
+            "cores": "18"
+          },
+          "derived": {
+            "GBs": 101.3745014869947,
+            "p95_GBs": 101.33065334979592
+          },
+          "iters": 3,
+          "max": 5.298208333333333,
+          "mean": 5.295041666666667,
+          "median": 5.295916666666667,
+          "min": 5.291,
+          "name": "cpu_write",
+          "p95": 5.298208333333333,
+          "unit": "GB/s",
+          "variant": "512MB"
+        },
+        {
+          "config": {
+            "cores": "18"
+          },
+          "derived": {
+            "GBs": 203.6628810390021,
+            "p95_GBs": 185.901600357811
+          },
+          "iters": 3,
+          "max": 8.663791666666667,
+          "mean": 7.990527777777778,
+          "median": 7.908229166666667,
+          "min": 7.3995625,
+          "name": "cpu_triad",
+          "p95": 8.663791666666667,
+          "unit": "GB/s",
+          "variant": "512MB"
+        },
+        {
+          "config": {},
+          "derived": {
+            "GBs": 561.5743336635933,
+            "p95_GBs": 464.58028344958547
+          },
+          "iters": 15,
+          "max": 0.5778020840807585,
+          "mean": 0.49112673599059536,
+          "median": 0.47800520769669674,
+          "min": 0.464687500425498,
+          "name": "gpu_read",
+          "p95": 0.5778020840807585,
+          "unit": "GB/s",
+          "variant": "256MB"
+        },
+        {
+          "config": {},
+          "derived": {
+            "GBs": 196.02175333646724,
+            "p95_GBs": 195.90998693446204
+          },
+          "iters": 15,
+          "max": 1.3701979169127299,
+          "mean": 1.3694687499082647,
+          "median": 1.3694166664208751,
+          "min": 1.3691666663362412,
+          "name": "gpu_write",
+          "p95": 1.3701979169127299,
+          "unit": "GB/s",
+          "variant": "256MB"
+        },
+        {
+          "config": {},
+          "derived": {
+            "GBs": 380.5051110918667,
+            "p95_GBs": 380.4264699795735
+          },
+          "iters": 15,
+          "max": 1.4112343760643853,
+          "mean": 1.4109631946970087,
+          "median": 1.4109427083894843,
+          "min": 1.4107083334238268,
+          "name": "gpu_copy",
+          "p95": 1.4112343760643853,
+          "unit": "GB/s",
+          "variant": "256MB"
+        },
+        {
+          "config": {},
+          "derived": {
+            "GBs": 555.0507514803992,
+            "p95_GBs": 554.5570458472167
+          },
+          "iters": 15,
+          "max": 1.452161457564216,
+          "mean": 1.4508788192567106,
+          "median": 1.4508697913697688,
+          "min": 1.4498229156743037,
+          "name": "gpu_triad",
+          "p95": 1.452161457564216,
+          "unit": "GB/s",
+          "variant": "256MB"
+        },
+        {
+          "config": {
+            "api": "MTL4 encoder"
+          },
+          "derived": {
+            "GBs": 42.56966772609836,
+            "p95_GBs": 42.525130408092544
+          },
+          "iters": 15,
+          "max": 12.624791666666667,
+          "mean": 12.610005555555555,
+          "median": 12.611583333333334,
+          "min": 12.583,
+          "name": "tensor_copy",
+          "p95": 12.624791666666667,
+          "unit": "GB/s",
+          "variant": "256MB fp32"
+        }
+      ],
+      "title": "Memory bandwidth (CPU + GPU)"
+    },
+    {
+      "id": "s2_gemm",
+      "notes": [
+        "tensorops/matmul2d probe: PASSED (single 64x32 tile, K=64, all elements correct); multi-tile/multi-K-chunk matmul2d dispatch silently no-ops on macOS 27.0 beta GPUCompiler (32023): full-size rows below report validation_failed, not skipped, because the op runs and returns zeros",
+        "tensorops/fp32: not supported (skipped)",
+        "tensorops/fp16/n512: VALIDATION FAILED max_abs_err=19.468708038330078 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "mps/bf16: unsupported data type (skipped)",
+        "tensorops/bf16/n512: VALIDATION FAILED max_abs_err=19.325054168701172 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "tensorops/int8/n512: VALIDATION FAILED max_abs_err=48670.0 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "mps/fp8: unsupported data type (skipped)",
+        "tensorops/fp8/n512: VALIDATION FAILED max_abs_err=17.54296875 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "mps/fp8e5m2: unsupported data type (skipped)",
+        "tensorops/fp8e5m2: not supported (skipped)",
+        "mps/fp4: unsupported data type (skipped)",
+        "tensorops/fp4/n512: VALIDATION FAILED max_abs_err=18.0 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "tensorops/fp32: not supported (skipped)",
+        "tensorops/fp16/n1024: VALIDATION FAILED max_abs_err=45.61699295043945 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "mps/bf16: unsupported data type (skipped)",
+        "tensorops/bf16/n1024: VALIDATION FAILED max_abs_err=45.41667175292969 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "tensorops/int8/n1024: VALIDATION FAILED max_abs_err=114028.0 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "mps/fp8: unsupported data type (skipped)",
+        "tensorops/fp8/n1024: VALIDATION FAILED max_abs_err=58.63671875 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "mps/fp8e5m2: unsupported data type (skipped)",
+        "tensorops/fp8e5m2: not supported (skipped)",
+        "mps/fp4: unsupported data type (skipped)",
+        "tensorops/fp4/n1024: VALIDATION FAILED max_abs_err=39.0 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "tensorops/fp32: not supported (skipped)",
+        "msl/fp16/n2048: VALIDATION FAILED max_abs_err=1.4579696655273438 rel_err=0.01785909038532007 (excluded)",
+        "tensorops/fp16/n2048: VALIDATION FAILED max_abs_err=81.63739776611328 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "mps/bf16: unsupported data type (skipped)",
+        "tensorops/bf16/n2048: VALIDATION FAILED max_abs_err=81.33203887939453 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "tensorops/int8/n2048: VALIDATION FAILED max_abs_err=204107.0 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "mps/fp8: unsupported data type (skipped)",
+        "tensorops/fp8/n2048: VALIDATION FAILED max_abs_err=89.36328125 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "mps/fp8e5m2: unsupported data type (skipped)",
+        "tensorops/fp8e5m2: not supported (skipped)",
+        "mps/fp4: unsupported data type (skipped)",
+        "tensorops/fp4/n2048: VALIDATION FAILED max_abs_err=65.5 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "tensorops/fp32: not supported (skipped)",
+        "msl/fp16/n4096: VALIDATION FAILED max_abs_err=4.2912445068359375 rel_err=0.03650270943035442 (excluded)",
+        "tensorops/fp16/n4096: VALIDATION FAILED max_abs_err=117.55961608886719 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "mps/bf16: unsupported data type (skipped)",
+        "tensorops/bf16/n4096: VALIDATION FAILED max_abs_err=117.78874969482422 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "tensorops/int8/n4096: VALIDATION FAILED max_abs_err=293960.0 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "mps/fp8: unsupported data type (skipped)",
+        "tensorops/fp8/n4096: VALIDATION FAILED max_abs_err=134.5546875 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "mps/fp8e5m2: unsupported data type (skipped)",
+        "tensorops/fp8e5m2: not supported (skipped)",
+        "mps/fp4: unsupported data type (skipped)",
+        "tensorops/fp4/n4096: VALIDATION FAILED max_abs_err=161.0 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "tensorops/fp32: not supported (skipped)",
+        "tensorops/fp16/n8192: VALIDATION FAILED max_abs_err=322.1950378417969 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "mps/bf16: unsupported data type (skipped)",
+        "tensorops/bf16/n8192: VALIDATION FAILED max_abs_err=321.0073547363281 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "tensorops/int8/n8192: VALIDATION FAILED max_abs_err=805534.0 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "mps/fp8: unsupported data type (skipped)",
+        "tensorops/fp8/n8192: VALIDATION FAILED max_abs_err=363.41796875 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)",
+        "mps/fp8e5m2: unsupported data type (skipped)",
+        "tensorops/fp8e5m2: not supported (skipped)",
+        "mps/fp4: unsupported data type (skipped)",
+        "tensorops/fp4/n8192: VALIDATION FAILED max_abs_err=255.0 rel_err=1.0 (excluded; multi-tile matmul2d silently no-ops on this beta toolchain, see docs/research-notes.md R8)"
+      ],
+      "runs": [
+        {
+          "config": {
+            "n": "512"
+          },
+          "derived": {
+            "GFLOPS": 1606.195697830965,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 0.21320833333333333,
+          "mean": 0.17420138888888886,
+          "median": 0.16712500000000002,
+          "min": 0.15625,
+          "name": "gemm_512_fp32",
+          "p95": 0.21254166666666666,
+          "unit": "ms",
+          "variant": "mps"
+        },
+        {
+          "config": {
+            "n": "512",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 1583.4953776576133,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 0.213625,
+          "mean": 0.17322500000000002,
+          "median": 0.16952083333333334,
+          "min": 0.13825,
+          "name": "gemm_512_fp32",
+          "p95": 0.21345833333333333,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "512"
+          },
+          "derived": {
+            "GFLOPS": 1807.392605975593,
+            "max_abs_err": 0.0075778961181640625,
+            "rel_err": 0.0003892346684353511
+          },
+          "iters": 30,
+          "max": 0.19358333333333333,
+          "mean": 0.1556138888888889,
+          "median": 0.14852083333333332,
+          "min": 0.14216666666666666,
+          "name": "gemm_512_fp16",
+          "p95": 0.18804166666666666,
+          "unit": "ms",
+          "variant": "mps"
+        },
+        {
+          "config": {
+            "n": "512",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 1736.0417526273243,
+            "max_abs_err": 0.09549808502197266,
+            "rel_err": 0.004905209160975428
+          },
+          "iters": 30,
+          "max": 0.216375,
+          "mean": 0.16637222222222228,
+          "median": 0.154625,
+          "min": 0.13125,
+          "name": "gemm_512_fp16",
+          "p95": 0.206375,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "512",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 1570.563370063384,
+            "max_abs_err": 0.3867645263671875,
+            "rel_err": 0.02001363219946833
+          },
+          "iters": 30,
+          "max": 0.2657083333333333,
+          "mean": 0.1772777777777778,
+          "median": 0.17091666666666666,
+          "min": 0.14025,
+          "name": "gemm_512_bf16",
+          "p95": 0.220625,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "512"
+          },
+          "derived": {
+            "GFLOPS": 1299.5362468986384,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 0.25775,
+          "mean": 0.2118861111111111,
+          "median": 0.2065625,
+          "min": 0.191625,
+          "name": "gemm_512_int8",
+          "p95": 0.253125,
+          "unit": "ms",
+          "variant": "mps"
+        },
+        {
+          "config": {
+            "n": "512",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 776.3392111827441,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 0.4476666666666667,
+          "mean": 0.35642222222222225,
+          "median": 0.3457708333333333,
+          "min": 0.3182083333333333,
+          "name": "gemm_512_int8",
+          "p95": 0.44458333333333333,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "512",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 585.9436965893589,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 0.541875,
+          "mean": 0.4581986111111111,
+          "median": 0.458125,
+          "min": 0.41129166666666667,
+          "name": "gemm_512_fp8",
+          "p95": 0.52675,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "512",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 591.2946577945023,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 0.5439583333333333,
+          "mean": 0.44992361111111107,
+          "median": 0.4539791666666667,
+          "min": 0.39770833333333333,
+          "name": "gemm_512_fp8e5m2",
+          "p95": 0.5129166666666667,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "512",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 545.3465056079908,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 0.5309583333333334,
+          "mean": 0.4894875,
+          "median": 0.4922291666666667,
+          "min": 0.44254166666666667,
+          "name": "gemm_512_fp4",
+          "p95": 0.5287083333333333,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "1024"
+          },
+          "derived": {
+            "GFLOPS": 7128.576424896265,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 0.34729166666666667,
+          "mean": 0.3050805555555555,
+          "median": 0.30125,
+          "min": 0.2919583333333333,
+          "name": "gemm_1024_fp32",
+          "p95": 0.3219166666666667,
+          "unit": "ms",
+          "variant": "mps"
+        },
+        {
+          "config": {
+            "n": "1024",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 6781.973491940261,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 0.3585,
+          "mean": 0.3189902777777778,
+          "median": 0.3166458333333333,
+          "min": 0.2907083333333333,
+          "name": "gemm_1024_fp32",
+          "p95": 0.3542083333333333,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "1024"
+          },
+          "derived": {
+            "GFLOPS": 12097.079580330948,
+            "max_abs_err": 0.015522003173828125,
+            "rel_err": 0.00034026800474752894
+          },
+          "iters": 30,
+          "max": 0.23791666666666667,
+          "mean": 0.18099444444444446,
+          "median": 0.17752083333333332,
+          "min": 0.15816666666666665,
+          "name": "gemm_1024_fp16",
+          "p95": 0.22083333333333335,
+          "unit": "ms",
+          "variant": "mps"
+        },
+        {
+          "config": {
+            "n": "1024",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 6912.03749104808,
+            "max_abs_err": 0.34091949462890625,
+            "rel_err": 0.007473519681564674
+          },
+          "iters": 30,
+          "max": 0.3671666666666667,
+          "mean": 0.3211180555555554,
+          "median": 0.3106875,
+          "min": 0.3045833333333333,
+          "name": "gemm_1024_fp16",
+          "p95": 0.3626666666666667,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "1024",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 6532.683636732367,
+            "max_abs_err": 1.2359504699707031,
+            "rel_err": 0.027213585281950472
+          },
+          "iters": 30,
+          "max": 0.4405,
+          "mean": 0.3380472222222223,
+          "median": 0.32872916666666663,
+          "min": 0.3101666666666667,
+          "name": "gemm_1024_bf16",
+          "p95": 0.426125,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "1024"
+          },
+          "derived": {
+            "GFLOPS": 4506.392196555042,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 0.5828333333333334,
+          "mean": 0.48211944444444443,
+          "median": 0.47654166666666664,
+          "min": 0.451,
+          "name": "gemm_1024_int8",
+          "p95": 0.5165416666666667,
+          "unit": "ms",
+          "variant": "mps"
+        },
+        {
+          "config": {
+            "n": "1024",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 1515.3359858873341,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 1.4698333333333333,
+          "mean": 1.4158333333333337,
+          "median": 1.4171666666666667,
+          "min": 1.3525,
+          "name": "gemm_1024_int8",
+          "p95": 1.469125,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "1024",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 1121.6088169483044,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 1.9285833333333333,
+          "mean": 1.9087083333333337,
+          "median": 1.9146458333333334,
+          "min": 1.8553333333333333,
+          "name": "gemm_1024_fp8",
+          "p95": 1.92825,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "1024",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 1110.42039776363,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 1.986375,
+          "mean": 1.929865277777778,
+          "median": 1.9339374999999999,
+          "min": 1.8728333333333333,
+          "name": "gemm_1024_fp8e5m2",
+          "p95": 1.981125,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "1024",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 998.9651222452657,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 2.1981666666666664,
+          "mean": 2.150675,
+          "median": 2.1497083333333338,
+          "min": 2.0973333333333333,
+          "name": "gemm_1024_fp4",
+          "p95": 2.1694166666666663,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "2048"
+          },
+          "derived": {
+            "GFLOPS": 12412.82657723455,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 1.4360833333333332,
+          "mean": 1.3798055555555557,
+          "median": 1.3840416666666666,
+          "min": 1.3019583333333333,
+          "name": "gemm_2048_fp32",
+          "p95": 1.4347083333333333,
+          "unit": "ms",
+          "variant": "mps"
+        },
+        {
+          "config": {
+            "n": "2048",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 11429.117984698969,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 1.5704583333333333,
+          "mean": 1.506684722222222,
+          "median": 1.5031666666666668,
+          "min": 1.4607083333333333,
+          "name": "gemm_2048_fp32",
+          "p95": 1.5690416666666667,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "2048"
+          },
+          "derived": {
+            "GFLOPS": 36385.18005788916,
+            "max_abs_err": 0.03115081787109375,
+            "rel_err": 0.0003815753407566855
+          },
+          "iters": 30,
+          "max": 0.5174583333333334,
+          "mean": 0.4643625000000001,
+          "median": 0.4721666666666667,
+          "min": 0.4180416666666667,
+          "name": "gemm_2048_fp16",
+          "p95": 0.51375,
+          "unit": "ms",
+          "variant": "mps"
+        },
+        {
+          "config": {
+            "n": "2048",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 10587.837463336971,
+            "max_abs_err": 1.9983406066894531,
+            "rel_err": 0.024570152601888513
+          },
+          "iters": 30,
+          "max": 1.6895416666666667,
+          "mean": 1.6202569444444446,
+          "median": 1.6226041666666666,
+          "min": 1.5774583333333332,
+          "name": "gemm_2048_bf16",
+          "p95": 1.6734583333333333,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "2048"
+          },
+          "derived": {
+            "GFLOPS": 6756.413011110019,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 2.5488333333333335,
+          "mean": 2.5383638888888886,
+          "median": 2.54275,
+          "min": 2.5004583333333334,
+          "name": "gemm_2048_int8",
+          "p95": 2.5474166666666664,
+          "unit": "ms",
+          "variant": "mps"
+        },
+        {
+          "config": {
+            "n": "2048",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 1404.215062650701,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 13.027791666666666,
+          "mean": 12.319951388888887,
+          "median": 12.2345,
+          "min": 12.035416666666666,
+          "name": "gemm_2048_int8",
+          "p95": 12.677041666666666,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "2048",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 1244.3375913591033,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 13.835041666666665,
+          "mean": 13.804679166666665,
+          "median": 13.806437500000001,
+          "min": 13.78275,
+          "name": "gemm_2048_fp8",
+          "p95": 13.826958333333334,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "2048",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 1238.940319400958,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 13.899541666666666,
+          "mean": 13.867502777777776,
+          "median": 13.866583333333333,
+          "min": 13.847541666666666,
+          "name": "gemm_2048_fp8e5m2",
+          "p95": 13.882708333333333,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "2048",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 1100.7944202070146,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 15.671833333333334,
+          "mean": 15.608019444444443,
+          "median": 15.606791666666666,
+          "min": 15.5455,
+          "name": "gemm_2048_fp4",
+          "p95": 15.642416666666666,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "4096"
+          },
+          "derived": {
+            "GFLOPS": 14699.222303401932,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 9.394583333333333,
+          "mean": 9.353323611111113,
+          "median": 9.350083333333334,
+          "min": 9.327708333333334,
+          "name": "gemm_4096_fp32",
+          "p95": 9.370541666666666,
+          "unit": "ms",
+          "variant": "mps"
+        },
+        {
+          "config": {
+            "n": "4096",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 11155.457385243906,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 12.41125,
+          "mean": 12.317630555555555,
+          "median": 12.320333333333334,
+          "min": 12.24475,
+          "name": "gemm_4096_fp32",
+          "p95": 12.392041666666666,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "4096"
+          },
+          "derived": {
+            "GFLOPS": 57746.44847478161,
+            "max_abs_err": 0.0315399169921875,
+            "rel_err": 0.00026828870356590344
+          },
+          "iters": 30,
+          "max": 2.416,
+          "mean": 2.37435,
+          "median": 2.3800416666666666,
+          "min": 2.2802916666666664,
+          "name": "gemm_4096_fp16",
+          "p95": 2.4079166666666665,
+          "unit": "ms",
+          "variant": "mps"
+        },
+        {
+          "config": {
+            "n": "4096",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 11919.083641661608,
+            "max_abs_err": 4.80169677734375,
+            "rel_err": 0.04076532597369732
+          },
+          "iters": 30,
+          "max": 11.554666666666666,
+          "mean": 11.53315555555555,
+          "median": 11.531,
+          "min": 11.51025,
+          "name": "gemm_4096_bf16",
+          "p95": 11.551958333333333,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "4096"
+          },
+          "derived": {
+            "GFLOPS": 7529.620836930706,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 18.275291666666668,
+          "mean": 18.250069444444446,
+          "median": 18.253104166666667,
+          "min": 18.174666666666667,
+          "name": "gemm_4096_int8",
+          "p95": 18.27370833333333,
+          "unit": "ms",
+          "variant": "mps"
+        },
+        {
+          "config": {
+            "n": "4096",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 889.2994649102482,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 156.069875,
+          "mean": 154.57088750000003,
+          "median": 154.5474375,
+          "min": 153.36,
+          "name": "gemm_4096_int8",
+          "p95": 155.780625,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "4096",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 1283.4186796736024,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 107.17491666666668,
+          "mean": 107.09549166666667,
+          "median": 107.08816666666667,
+          "min": 107.05058333333332,
+          "name": "gemm_4096_fp8",
+          "p95": 107.15829166666667,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "4096",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 1278.1095428566116,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 107.61966666666667,
+          "mean": 107.54018472222221,
+          "median": 107.533,
+          "min": 107.47591666666668,
+          "name": "gemm_4096_fp8e5m2",
+          "p95": 107.605125,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "4096",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 1138.9364836249185,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 121.73366666666668,
+          "mean": 120.72983472222221,
+          "median": 120.6730625,
+          "min": 120.61895833333332,
+          "name": "gemm_4096_fp4",
+          "p95": 121.28841666666668,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "8192"
+          },
+          "derived": {
+            "GFLOPS": 14619.427747879037,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 75.26904166666667,
+          "mean": 75.20797361111111,
+          "median": 75.20893749999999,
+          "min": 75.12454166666667,
+          "name": "gemm_8192_fp32",
+          "p95": 75.25975,
+          "unit": "ms",
+          "variant": "mps"
+        },
+        {
+          "config": {
+            "n": "8192",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 8183.413154453778,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 135.26733333333334,
+          "mean": 134.27424027777778,
+          "median": 134.3585625,
+          "min": 132.8105,
+          "name": "gemm_8192_fp32",
+          "p95": 135.26366666666667,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "8192"
+          },
+          "derived": {
+            "GFLOPS": 60750.414544731255,
+            "max_abs_err": 0.128204345703125,
+            "rel_err": 0.00039790912536050746
+          },
+          "iters": 30,
+          "max": 18.13204166666667,
+          "mean": 18.099155555555555,
+          "median": 18.09883333333333,
+          "min": 18.05016666666667,
+          "name": "gemm_8192_fp16",
+          "p95": 18.119875,
+          "unit": "ms",
+          "variant": "mps"
+        },
+        {
+          "config": {
+            "n": "8192",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 5334.553628875018,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 206.31829166666665,
+          "mean": 206.1035069444445,
+          "median": 206.11127083333332,
+          "min": 205.92754166666666,
+          "name": "gemm_8192_fp16",
+          "p95": 206.25191666666666,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "8192",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 12160.892354624428,
+            "max_abs_err": 23.371551513671875,
+            "rel_err": 0.0728069035454624
+          },
+          "iters": 30,
+          "max": 90.63541666666667,
+          "mean": 90.42305972222222,
+          "median": 90.41372916666666,
+          "min": 90.35641666666668,
+          "name": "gemm_8192_bf16",
+          "p95": 90.52220833333332,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "8192"
+          },
+          "derived": {
+            "GFLOPS": 7691.4574416276055,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 143.06041666666667,
+          "mean": 142.95929166666667,
+          "median": 142.9523125,
+          "min": 142.89720833333334,
+          "name": "gemm_8192_int8",
+          "p95": 143.03529166666667,
+          "unit": "ms",
+          "variant": "mps"
+        },
+        {
+          "config": {
+            "n": "8192",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 688.9304594772428,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 1598.90575,
+          "mean": 1593.4348083333332,
+          "median": 1595.9689583333334,
+          "min": 1567.8040833333332,
+          "name": "gemm_8192_int8",
+          "p95": 1598.4476666666667,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "8192",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 1288.9523675945038,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 853.1299583333333,
+          "mean": 853.0324944444442,
+          "median": 853.0273541666666,
+          "min": 852.9494583333334,
+          "name": "gemm_8192_fp8",
+          "p95": 853.0845833333334,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "8192",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 1283.796558374957,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 857.1887083333334,
+          "mean": 856.4783847222224,
+          "median": 856.4531666666667,
+          "min": 856.3570416666666,
+          "name": "gemm_8192_fp8e5m2",
+          "p95": 856.5226666666666,
+          "unit": "ms",
+          "variant": "msl"
+        },
+        {
+          "config": {
+            "n": "8192",
+            "tile": "32x32"
+          },
+          "derived": {
+            "GFLOPS": 1142.6039848963796,
+            "max_abs_err": 0,
+            "rel_err": 0
+          },
+          "iters": 30,
+          "max": 963.0213333333334,
+          "mean": 962.3344500000001,
+          "median": 962.2858333333334,
+          "min": 962.2424583333334,
+          "name": "gemm_8192_fp4",
+          "p95": 962.887125,
+          "unit": "ms",
+          "variant": "msl"
+        }
+      ],
+      "title": "GEMM throughput (GPU: MPS / custom MSL / TensorOps)"
+    },
+    {
+      "id": "s3_ane_raw",
+      "notes": [
+        "Methodology: MIL 1x1-conv chains via _ANEInMemoryModelDescriptor, IOSurface fp32 I/O (or fp16 in), mach_absolute_time, median of N. int8 = W8A16 (per-channel symmetric, constexpr_affine_dequantize, same scheme as CoreML-compiled quantized models). The conv chain is the ANE's native dense datapath (matmul/linear layers fold into the convolution datapath; a linear y=x@W.T is a 1x1 conv) \u2014 see docs/research-notes.md R7 and arXiv:2606.22283. Adapted from maderix/ANE (MIT).",
+        "compiles this run: 22 (per-process limit ~119)"
+      ],
+      "runs": [
+        {
+          "config": {
+            "ch": "256",
+            "depth": "1",
+            "sp": "64",
+            "subset": "dispatch",
+            "working_set_mb": "0.2"
+          },
+          "derived": {
+            "GBs_weights": 1.1020241723594326,
+            "TOPS": 0.07052954703100368
+          },
+          "iters": 100,
+          "max": 0.15008333333333335,
+          "mean": 0.12044,
+          "median": 0.1189375,
+          "min": 0.09008333333333333,
+          "name": "dispatch_floor",
+          "p95": 0.14508333333333334,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        },
+        {
+          "config": {
+            "ch": "256",
+            "depth": "1",
+            "sp": "256",
+            "subset": "scaling",
+            "working_set_mb": "0.4"
+          },
+          "derived": {
+            "GBs_weights": 1.193145457993552,
+            "TOPS": 0.3054452372463493
+          },
+          "iters": 100,
+          "max": 1.3025,
+          "mean": 0.12460291666666666,
+          "median": 0.10985416666666667,
+          "min": 0.08383333333333333,
+          "name": "scale_256",
+          "p95": 0.15320833333333334,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        },
+        {
+          "config": {
+            "ch": "512",
+            "depth": "1",
+            "sp": "512",
+            "subset": "scaling",
+            "working_set_mb": "1.5"
+          },
+          "derived": {
+            "GBs_weights": 4.469950976909414,
+            "TOPS": 2.28861490017762
+          },
+          "iters": 100,
+          "max": 1.292625,
+          "mean": 0.17872,
+          "median": 0.11729166666666667,
+          "min": 0.09370833333333332,
+          "name": "scale_512",
+          "p95": 1.229,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        },
+        {
+          "config": {
+            "ch": "1024",
+            "depth": "1",
+            "sp": "1024",
+            "subset": "scaling",
+            "working_set_mb": "6.0"
+          },
+          "derived": {
+            "GBs_weights": 8.110812666183223,
+            "TOPS": 8.305472170171623
+          },
+          "iters": 100,
+          "max": 0.2776666666666667,
+          "mean": 0.25886125,
+          "median": 0.25856250000000003,
+          "min": 0.24345833333333333,
+          "name": "scale_1024",
+          "p95": 0.2713333333333333,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        },
+        {
+          "config": {
+            "ch": "2048",
+            "depth": "1",
+            "sp": "2048",
+            "subset": "scaling",
+            "working_set_mb": "24.0"
+          },
+          "derived": {
+            "GBs_weights": 4.609811258543511,
+            "TOPS": 9.44089345749711
+          },
+          "iters": 100,
+          "max": 1.8671666666666666,
+          "mean": 1.8191108333333335,
+          "median": 1.8197291666666666,
+          "min": 1.80275,
+          "name": "scale_2048",
+          "p95": 1.8295416666666668,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        },
+        {
+          "config": {
+            "ch": "4096",
+            "depth": "1",
+            "sp": "4096",
+            "subset": "scaling",
+            "working_set_mb": "96.0"
+          },
+          "derived": {
+            "GBs_weights": 1.2537229470118256,
+            "TOPS": 5.135249190960438
+          },
+          "iters": 100,
+          "max": 26.778375,
+          "mean": 26.763349583333333,
+          "median": 26.763833333333334,
+          "min": 26.748833333333334,
+          "name": "scale_4096",
+          "p95": 26.774875,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        },
+        {
+          "config": {
+            "ch": "512",
+            "depth": "32",
+            "sp": "64",
+            "subset": "peak_fp16",
+            "working_set_mb": "20.0"
+          },
+          "derived": {
+            "GBs_weights": 80.08217661097854,
+            "TOPS": 5.1252593031026255
+          },
+          "iters": 100,
+          "max": 0.22966666666666666,
+          "mean": 0.20906208333333343,
+          "median": 0.2095,
+          "min": 0.19054166666666666,
+          "name": "peak_512x64_d32",
+          "p95": 0.220125,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        },
+        {
+          "config": {
+            "ch": "512",
+            "depth": "48",
+            "sp": "64",
+            "subset": "peak_fp16",
+            "working_set_mb": "30.0"
+          },
+          "derived": {
+            "GBs_weights": 100.07949892294947,
+            "TOPS": 6.405087931068765
+          },
+          "iters": 100,
+          "max": 0.27920833333333334,
+          "mean": 0.2530125,
+          "median": 0.25145833333333334,
+          "min": 0.23641666666666666,
+          "name": "peak_512x64_d48",
+          "p95": 0.2725416666666667,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        },
+        {
+          "config": {
+            "ch": "512",
+            "depth": "64",
+            "sp": "64",
+            "subset": "peak_fp16",
+            "working_set_mb": "40.0"
+          },
+          "derived": {
+            "GBs_weights": 106.76915717600265,
+            "TOPS": 6.833226059264169
+          },
+          "iters": 100,
+          "max": 0.3320416666666667,
+          "mean": 0.3145412499999999,
+          "median": 0.31427083333333333,
+          "min": 0.2947083333333333,
+          "name": "peak_512x64_d64",
+          "p95": 0.3280416666666667,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        },
+        {
+          "config": {
+            "ch": "256",
+            "depth": "128",
+            "sp": "64",
+            "subset": "peak_fp16",
+            "working_set_mb": "24.0"
+          },
+          "derived": {
+            "GBs_weights": 81.06567022347494,
+            "TOPS": 5.188202894302396
+          },
+          "iters": 100,
+          "max": 0.22054166666666666,
+          "mean": 0.20632833333333342,
+          "median": 0.20695833333333333,
+          "min": 0.18733333333333335,
+          "name": "peak_256x64_d128",
+          "p95": 0.217125,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        },
+        {
+          "config": {
+            "ch": "256",
+            "depth": "256",
+            "sp": "64",
+            "subset": "peak_fp16",
+            "working_set_mb": "48.0"
+          },
+          "derived": {
+            "GBs_weights": 108.26193022786853,
+            "TOPS": 6.928763534583585
+          },
+          "iters": 100,
+          "max": 0.33,
+          "mean": 0.3085820833333334,
+          "median": 0.3099375,
+          "min": 0.28625,
+          "name": "peak_256x64_d256",
+          "p95": 0.32258333333333333,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        },
+        {
+          "config": {
+            "ch": "512",
+            "depth": "64",
+            "sp": "64",
+            "subset": "peak_fp16",
+            "working_set_mb": "40.0"
+          },
+          "derived": {
+            "GBs_weights": 107.39566153230646,
+            "TOPS": 6.873322338067614
+          },
+          "iters": 100,
+          "max": 0.3297083333333333,
+          "mean": 0.31178583333333326,
+          "median": 0.3124375,
+          "min": 0.29,
+          "name": "peak_512x64_d64_fp16io",
+          "p95": 0.3247916666666667,
+          "unit": "ms/eval",
+          "variant": "fp16 IO"
+        },
+        {
+          "config": {
+            "ch": "512",
+            "depth": "64",
+            "sp": "64",
+            "subset": "peak_int8",
+            "working_set_mb": "24.0"
+          },
+          "derived": {
+            "GBs_weights": 77.82241669887902,
+            "TOPS": 9.961269337456514
+          },
+          "iters": 100,
+          "max": 0.228375,
+          "mean": 0.2149158333333334,
+          "median": 0.21558333333333332,
+          "min": 0.19154166666666667,
+          "name": "peak_int8_512x64_d64",
+          "p95": 0.2245,
+          "unit": "ms/eval",
+          "variant": "int8 W8A16"
+        },
+        {
+          "config": {
+            "ch": "512",
+            "depth": "128",
+            "sp": "64",
+            "subset": "peak_int8",
+            "working_set_mb": "48.0"
+          },
+          "derived": {
+            "GBs_weights": 102.3781296720061,
+            "TOPS": 13.104400598016783
+          },
+          "iters": 100,
+          "max": 0.4040416666666667,
+          "mean": 0.32806625000000006,
+          "median": 0.32775,
+          "min": 0.3112083333333333,
+          "name": "peak_int8_512x64_d128",
+          "p95": 0.3388333333333333,
+          "unit": "ms/eval",
+          "variant": "int8 W8A16"
+        },
+        {
+          "config": {
+            "ch": "256",
+            "depth": "16",
+            "sp": "32",
+            "subset": "sram",
+            "working_set_mb": "2.5"
+          },
+          "derived": {
+            "GBs_weights": 20.30730199717571,
+            "TOPS": 0.6498336639096227
+          },
+          "iters": 100,
+          "max": 0.138625,
+          "mean": 0.10677791666666668,
+          "median": 0.10327083333333334,
+          "min": 0.084125,
+          "name": "sram_2.6MB",
+          "p95": 0.12954166666666667,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        },
+        {
+          "config": {
+            "ch": "512",
+            "depth": "16",
+            "sp": "64",
+            "subset": "sram",
+            "working_set_mb": "10.0"
+          },
+          "derived": {
+            "GBs_weights": 57.073449184975196,
+            "TOPS": 3.652700747838413
+          },
+          "iters": 100,
+          "max": 0.16733333333333333,
+          "mean": 0.14776333333333336,
+          "median": 0.14697916666666666,
+          "min": 0.13229166666666667,
+          "name": "sram_10MB",
+          "p95": 0.162125,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        },
+        {
+          "config": {
+            "ch": "768",
+            "depth": "16",
+            "sp": "96",
+            "subset": "sram",
+            "working_set_mb": "22.5"
+          },
+          "derived": {
+            "GBs_weights": 82.30102325581396,
+            "TOPS": 7.90089823255814
+          },
+          "iters": 100,
+          "max": 0.246875,
+          "mean": 0.2283383333333334,
+          "median": 0.22933333333333333,
+          "min": 0.20458333333333334,
+          "name": "sram_24MB",
+          "p95": 0.241875,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        },
+        {
+          "config": {
+            "ch": "1024",
+            "depth": "16",
+            "sp": "128",
+            "subset": "sram",
+            "working_set_mb": "40.0"
+          },
+          "derived": {
+            "GBs_weights": 100.39974666500436,
+            "TOPS": 12.85116757312056
+          },
+          "iters": 100,
+          "max": 0.34933333333333333,
+          "mean": 0.3335375,
+          "median": 0.33420833333333333,
+          "min": 0.318375,
+          "name": "sram_42MB",
+          "p95": 0.3434166666666667,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        },
+        {
+          "config": {
+            "ch": "1536",
+            "depth": "16",
+            "sp": "192",
+            "subset": "sram",
+            "working_set_mb": "90.0"
+          },
+          "derived": {
+            "GBs_weights": 69.96309933007703,
+            "TOPS": 13.432915071374788
+          },
+          "iters": 100,
+          "max": 1.5235,
+          "mean": 1.0895116666666664,
+          "median": 1.0791041666666668,
+          "min": 1.065625,
+          "name": "sram_94MB",
+          "p95": 1.1004166666666668,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        },
+        {
+          "config": {
+            "ch": "2048",
+            "depth": "16",
+            "sp": "256",
+            "subset": "sram",
+            "working_set_mb": "160.0"
+          },
+          "derived": {
+            "GBs_weights": 73.30463263773525,
+            "TOPS": 18.765985955260224
+          },
+          "iters": 100,
+          "max": 1.9198333333333333,
+          "mean": 1.8343574999999996,
+          "median": 1.8309583333333332,
+          "min": 1.814625,
+          "name": "sram_168MB",
+          "p95": 1.8524166666666668,
+          "unit": "ms/eval",
+          "variant": "fp32 IO"
+        }
+      ],
+      "title": "ANE raw throughput (direct _ANEInMemoryModel private API)"
+    },
+    {
+      "id": "s4_coreai",
+      "notes": [
+        "available compute unit kinds: cpu, gpu, neuralEngine",
+        "Model assets: models/coreai/*.aimodel (generated by tools/gen_models.py via coreai-torch)",
+        "deep_fp16 python validation: max_abs_diff=- ok=1 flops=2147483648",
+        "deep_fp16/default: validated vs torch ref: max_abs=9.048e+31 max_rel=1.045e-03 ok=true (tol 0.1)",
+        "deep_fp16/default: specialization 2 ms (excluded from timing)",
+        "deep_fp16/ane-preferred: validated vs torch ref: max_abs=9.048e+31 max_rel=1.045e-03 ok=true (tol 0.1)",
+        "deep_fp16/ane-preferred: specialization 1 ms (excluded from timing)",
+        "deep_fp16/gpu-preferred: validated vs torch ref: max_abs=9.048e+31 max_rel=1.045e-03 ok=true (tol 0.1)",
+        "deep_fp16/gpu-preferred: specialization 1 ms (excluded from timing)",
+        "deep_int8 python validation: max_abs_diff=- ok=1 flops=2147483648",
+        "deep_int8/default: validated vs torch ref: max_abs=1.189e+37 max_rel=5.430e+66 ok=false (tol 1.0)",
+        "deep_int8/default: specialization 1 ms (excluded from timing)",
+        "deep_int8/ane-preferred: validated vs torch ref: max_abs=1.189e+37 max_rel=5.430e+66 ok=false (tol 1.0)",
+        "deep_int8/ane-preferred: specialization 1 ms (excluded from timing)",
+        "deep_int8/gpu-preferred: validated vs torch ref: max_abs=1.189e+37 max_rel=5.430e+66 ok=false (tol 1.0)",
+        "deep_int8/gpu-preferred: specialization 1 ms (excluded from timing)",
+        "matmul python validation: max_abs_diff=- ok=1 flops=17179869184",
+        "matmul/default: validated vs torch ref: max_abs=1.211e-08 max_rel=1.148e-05 ok=true (tol 0.02)",
+        "matmul/default: specialization 1 ms (excluded from timing)",
+        "matmul/ane-preferred: validated vs torch ref: max_abs=1.211e-08 max_rel=1.148e-05 ok=true (tol 0.02)",
+        "matmul/ane-preferred: specialization 1 ms (excluded from timing)",
+        "matmul/gpu-preferred: validated vs torch ref: max_abs=1.211e-08 max_rel=1.148e-05 ok=true (tol 0.02)",
+        "matmul/gpu-preferred: specialization 1 ms (excluded from timing)"
+      ],
+      "runs": [
+        {
+          "config": {
+            "max_abs_diff": "9.048e+31",
+            "max_rel_err": "1.045e-03",
+            "out_shape": "1x512x1x64",
+            "specialize_ms": "2",
+            "validated": "yes"
+          },
+          "derived": {
+            "TOPS": 1.8441580660882009,
+            "out_elems": 32768
+          },
+          "iters": 50,
+          "max": 3.648375,
+          "mean": 1.8204908333333334,
+          "median": 1.1644791666666667,
+          "min": 1.063,
+          "name": "coreai_deep_fp16",
+          "p95": 3.3331666666666666,
+          "unit": "ms/run",
+          "variant": "default"
+        },
+        {
+          "config": {
+            "max_abs_diff": "9.048e+31",
+            "max_rel_err": "1.045e-03",
+            "out_shape": "1x512x1x64",
+            "specialize_ms": "1",
+            "validated": "yes"
+          },
+          "derived": {
+            "TOPS": 2.0177585856007516,
+            "out_elems": 32768
+          },
+          "iters": 50,
+          "max": 1.2275416666666668,
+          "mean": 1.063414166666667,
+          "median": 1.0642916666666666,
+          "min": 0.9663333333333334,
+          "name": "coreai_deep_fp16",
+          "p95": 1.1600416666666666,
+          "unit": "ms/run",
+          "variant": "ane-preferred"
+        },
+        {
+          "config": {
+            "max_abs_diff": "9.048e+31",
+            "max_rel_err": "1.045e-03",
+            "out_shape": "1x512x1x64",
+            "specialize_ms": "1",
+            "validated": "yes"
+          },
+          "derived": {
+            "TOPS": 2.092469146685071,
+            "out_elems": 32768
+          },
+          "iters": 50,
+          "max": 1.157875,
+          "mean": 1.036564166666667,
+          "median": 1.0262916666666668,
+          "min": 0.98425,
+          "name": "coreai_deep_fp16",
+          "p95": 1.11275,
+          "unit": "ms/run",
+          "variant": "gpu-preferred"
+        },
+        {
+          "config": {
+            "max_abs_diff": "1.189e+37",
+            "max_rel_err": "5.430e+66",
+            "out_shape": "1x512x1x64",
+            "specialize_ms": "1",
+            "validated": "no"
+          },
+          "derived": {
+            "TOPS": 2.2794041639909777,
+            "out_elems": 32768
+          },
+          "iters": 50,
+          "max": 1.0885,
+          "mean": 0.9403124999999999,
+          "median": 0.942125,
+          "min": 0.8327083333333334,
+          "name": "coreai_deep_int8",
+          "p95": 1.0398333333333334,
+          "unit": "ms/run",
+          "variant": "default"
+        },
+        {
+          "config": {
+            "max_abs_diff": "1.189e+37",
+            "max_rel_err": "5.430e+66",
+            "out_shape": "1x512x1x64",
+            "specialize_ms": "1",
+            "validated": "no"
+          },
+          "derived": {
+            "TOPS": 2.2982590154957525,
+            "out_elems": 32768
+          },
+          "iters": 50,
+          "max": 1.0789583333333332,
+          "mean": 0.931218333333333,
+          "median": 0.9343958333333333,
+          "min": 0.835125,
+          "name": "coreai_deep_int8",
+          "p95": 1.07375,
+          "unit": "ms/run",
+          "variant": "ane-preferred"
+        },
+        {
+          "config": {
+            "max_abs_diff": "1.189e+37",
+            "max_rel_err": "5.430e+66",
+            "out_shape": "1x512x1x64",
+            "specialize_ms": "1",
+            "validated": "no"
+          },
+          "derived": {
+            "TOPS": 2.2769873007289596,
+            "out_elems": 32768
+          },
+          "iters": 50,
+          "max": 1.1011666666666668,
+          "mean": 0.9419374999999998,
+          "median": 0.943125,
+          "min": 0.8695833333333334,
+          "name": "coreai_deep_int8",
+          "p95": 1.0780416666666668,
+          "unit": "ms/run",
+          "variant": "gpu-preferred"
+        },
+        {
+          "config": {
+            "max_abs_diff": "1.211e-08",
+            "max_rel_err": "1.148e-05",
+            "out_shape": "1x2048",
+            "specialize_ms": "1",
+            "validated": "yes"
+          },
+          "derived": {
+            "TOPS": 88.05485540117458,
+            "out_elems": 2048
+          },
+          "iters": 50,
+          "max": 0.24954166666666666,
+          "mean": 0.19506666666666667,
+          "median": 0.19510416666666666,
+          "min": 0.18075,
+          "name": "coreai_matmul",
+          "p95": 0.2065,
+          "unit": "ms/run",
+          "variant": "default"
+        },
+        {
+          "config": {
+            "max_abs_diff": "1.211e-08",
+            "max_rel_err": "1.148e-05",
+            "out_shape": "1x2048",
+            "specialize_ms": "1",
+            "validated": "yes"
+          },
+          "derived": {
+            "TOPS": 87.8110660027686,
+            "out_elems": 2048
+          },
+          "iters": 50,
+          "max": 0.2745,
+          "mean": 0.19684749999999998,
+          "median": 0.19564583333333335,
+          "min": 0.18170833333333333,
+          "name": "coreai_matmul",
+          "p95": 0.21570833333333334,
+          "unit": "ms/run",
+          "variant": "ane-preferred"
+        },
+        {
+          "config": {
+            "max_abs_diff": "1.211e-08",
+            "max_rel_err": "1.148e-05",
+            "out_shape": "1x2048",
+            "specialize_ms": "1",
+            "validated": "yes"
+          },
+          "derived": {
+            "TOPS": 83.45650448659043,
+            "out_elems": 2048
+          },
+          "iters": 50,
+          "max": 0.2649583333333333,
+          "mean": 0.2022266666666667,
+          "median": 0.20585416666666667,
+          "min": 0.17058333333333334,
+          "name": "coreai_matmul",
+          "p95": 0.23316666666666666,
+          "unit": "ms/run",
+          "variant": "gpu-preferred"
+        }
+      ],
+      "title": "Core AI (.aimodel) inference \u2014 official ANE/GPU dispatch stack"
+    },
+    {
+      "id": "s5_coreml",
+      "notes": [
+        "Legacy Core ML path (computeUnits = cpuAndNeuralEngine). Same MIL conv chains as S3, compiled with coremlc.",
+        "conv_256x64_d8: coremlc failed: Warning: ignoring unrecognized command line argument --minimum-deployment-target macos27\ncoremlc: error: Failed to parse the model specification. Error: Field number 13 has wireType 7, which is not supported.\n"
+      ],
+      "runs": [],
+      "title": "Core ML (legacy) ANE-preferred baseline"
+    }
+  ],
+  "status": {
+    "s1_memory": "done",
+    "s2_gemm": "done",
+    "s3_ane": "done",
+    "s4_coreai": "done",
+    "s5_coreml": "done",
+    "spike": "GO"
+  }
+}
