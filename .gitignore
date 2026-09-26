@@ -1,7 +1,9 @@
 .build/
 .swiftpm/
-results/
-models/
+results/*
+!results/.gitkeep
+models/*
+!models/.gitkeep
 tools/.venv/
 tools/pip_install.log
 .DS_Store
