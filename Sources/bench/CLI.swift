@@ -49,10 +49,11 @@ struct CLI {
         return d
     }
 
-    static func makeReport(machine: MachineInfo, sections: [SuiteSection], status: [String: String]) -> ReportV1 {
+    static func makeReport(machine: MachineInfo, window: WindowSnapshot,
+                           sections: [SuiteSection], status: [String: String]) -> ReportV1 {
         ReportV1(schema: ReportV1.schemaID,
                  generated: ISO8601DateFormatter().string(from: Date()),
-                 machine: machine, sections: sections, status: status)
+                 machine: machine, window: window, sections: sections, status: status)
     }
 
     static func padL(_ s: String, _ w: Int) -> String {
@@ -100,7 +101,8 @@ struct CLI {
         silicon-ledger-bench — M5 Max local AI hardware benchmark
 
         Usage:
-          bench probe                     S0 machine fingerprint (JSON + table)
+          bench probe                     S0 machine fingerprint + run window (JSON + table)
+          bench state                     print the run window alone (processes, sessions, load)
           bench memory [--iters N]        S1 memory bandwidth (CPU vDSP / GPU Metal / MTL4 tensor copy)
           bench gemm [--sizes 512,1024,2048,4096,8192] [--dtypes fp32,fp16,bf16,int8,fp8,fp8e5m2,fp4]
                      [--paths mps,msl,tensorops] [--iters N]
@@ -133,13 +135,16 @@ struct CLI {
             return 0
         case "probe":
             return runProbe()
+        case "state":
+            return runState()
         case "memory":
             do {
                 let iters = intFlag(flags, "iters", 15)
                 let machine = Fingerprint.probe()
+                let window = WindowCapture.capture(machine: machine)
                 let section = try MemorySuite.run(device: device(), iters: iters)
                 printTable(section)
-                try writeReport(makeReport(machine: machine, sections: [section], status: ["memory": "done"]))
+                try writeReport(makeReport(machine: machine, window: window, sections: [section], status: ["memory": "done"]))
                 return 0
             } catch {
                 print("memory failed: \(error)")
@@ -152,9 +157,10 @@ struct CLI {
                 let dtypes = strs(flags["dtypes"], default: ["fp32", "fp16", "bf16", "int8", "fp8", "fp8e5m2", "fp4"])
                 let paths = strs(flags["paths"], default: ["mps", "msl", "tensorops"])
                 let machine = Fingerprint.probe()
+                let window = WindowCapture.capture(machine: machine)
                 let section = try GEMMSuite.run(device: device(), sizes: sizes, dtypes: dtypes, paths: paths, iters: iters)
                 printTable(section)
-                try writeReport(makeReport(machine: machine, sections: [section], status: ["gemm": "done"]))
+                try writeReport(makeReport(machine: machine, window: window, sections: [section], status: ["gemm": "done"]))
                 return 0
             } catch {
                 print("gemm failed: \(error)")
@@ -180,9 +186,10 @@ struct CLI {
                 let iters = intFlag(flags, "iters", 100)
                 let subsets = strs(flags["subset"], default: [])
                 let machine = Fingerprint.probe()
+                let window = WindowCapture.capture(machine: machine)
                 let section = try ANESuite.run(subsets: subsets, iters: iters)
                 printTable(section)
-                try writeReport(makeReport(machine: machine, sections: [section],
+                try writeReport(makeReport(machine: machine, window: window, sections: [section],
                                            status: ["ane": section.runs.isEmpty ? "no-runs" : "done"]))
                 return 0
             } catch {
@@ -195,9 +202,10 @@ struct CLI {
                 let models = strs(flags["models"], default: [])
                 let variants = strs(flags["variants"], default: ["default", "ane", "gpu"])
                 let machine = Fingerprint.probe()
+                let window = WindowCapture.capture(machine: machine)
                 let section = try await CoreAISuite.run(models: models, variants: variants, iters: iters)
                 printTable(section)
-                try writeReport(makeReport(machine: machine, sections: [section], status: ["coreai": "done"]))
+                try writeReport(makeReport(machine: machine, window: window, sections: [section], status: ["coreai": "done"]))
                 return 0
             } catch {
                 print("coreai failed: \(error)")
@@ -207,9 +215,10 @@ struct CLI {
             do {
                 let iters = intFlag(flags, "iters", 100)
                 let machine = Fingerprint.probe()
+                let window = WindowCapture.capture(machine: machine)
                 let section = try await CoreMLSuite.run(device: device(), iters: iters)
                 printTable(section)
-                try writeReport(makeReport(machine: machine, sections: [section], status: ["coreml": "done"]))
+                try writeReport(makeReport(machine: machine, window: window, sections: [section], status: ["coreml": "done"]))
                 return 0
             } catch {
                 print("coreml failed: \(error)")
@@ -236,6 +245,7 @@ struct CLI {
         let t0 = Date()
         let includeCoreML = flags["include-coreml"] != nil
         let machine = Fingerprint.probe()
+        let window = WindowCapture.capture(machine: machine)
         var sections: [SuiteSection] = []
         var status: [String: String] = [:]
 
@@ -321,7 +331,7 @@ struct CLI {
         }
 
         do {
-            let report = makeReport(machine: machine, sections: sections, status: status)
+            let report = makeReport(machine: machine, window: window, sections: sections, status: status)
             let url = try JSONReport.write(report)
             let secs = Date().timeIntervalSince(t0)
             print("\n== summary ==")
@@ -380,6 +390,7 @@ struct CLI {
     @discardableResult
     static func runProbe() -> Int32 {
         let m = Fingerprint.probe()
+        let window = WindowCapture.capture(machine: m)
         print("== machine fingerprint ==")
         print("  fingerprint : \(m.fingerprint)")
         print("  host        : \(m.host) (\(m.model))")
@@ -392,10 +403,44 @@ struct CLI {
         print("  tensor dt   : \(m.metalTensor.sorted { $0.key < $1.key }.map { "\($0.key)=\($0.value ? "y" : "n")" }.joined(separator: " "))")
         print("  ane         : \(m.ane.sorted { $0.key < $1.key }.map { "\($0.key)=\($0.value ? "y" : "n")" }.joined(separator: " "))")
         print("  tools       : \(m.tools.sorted { $0.key < $1.key }.map { "\($0.key)=\($0.value)" }.joined(separator: " "))")
+        printWindow(window)
         let enc = JSONEncoder()
         enc.outputFormatting = [.prettyPrinted, .sortedKeys]
         let out = (try? enc.encode(m)) ?? Data()
         print("\n" + String(data: out, encoding: .utf8)!)
+        do {
+            try writeReport(makeReport(machine: m, window: window, sections: [], status: ["s0_probe": "done"]))
+        } catch {
+            print("report write failed: \(error)")
+        }
+        return 0
+    }
+
+    static func printWindow(_ w: WindowSnapshot) {
+        print("== run window (what else is running) ==")
+        print("  captured    : \(w.captured)  uptime \(Int(w.uptimeSeconds))s  boot \(w.bootTime)")
+        print("  load avg    : " + w.loadAverage.map { String(format: "%.2f", $0) }.joined(separator: " / ") + "  (1m/5m/15m)")
+        print("  sessions    : " + (w.sessions.isEmpty ? "(none)" :
+              w.sessions.map { "\($0.user)@\($0.tty) since \($0.login)" }.joined(separator: "; ")) +
+              (w.consoleSession ? "  [console/GUI session present]" : ""))
+        print("  gui         : windowServer=\(w.gui.windowServer ? "up" : "down") dock=\(w.gui.dock ? "up" : "down") finder=\(w.gui.finder ? "up" : "down") wallpaper=\(w.gui.wallpaper ? "up" : "down")" +
+              "  headless=\(w.gui.headless ? "yes" : "NO")")
+        print("  power       : \(w.powerSource)  thermal=\(w.thermalState)  prevent-sleep assertions=\(w.preventSleepCount)")
+        print("  watchlist   : " + (w.watchlist.isEmpty ? "(clean)" : w.watchlist.joined(separator: ", ")))
+        print("  top cpu     :")
+        for p in w.topCPU { print(String(format: "    %7d  %6.1f%%  %@", p.pid, p.cpu, p.command)) }
+        let enc = JSONEncoder()
+        enc.outputFormatting = [.prettyPrinted, .sortedKeys]
+        if let out = try? enc.encode(w), let s = String(data: out, encoding: .utf8) {
+            print("\n" + s)
+        }
+    }
+
+    @discardableResult
+    static func runState() -> Int32 {
+        let m = Fingerprint.probe()
+        let w = WindowCapture.capture(machine: m)
+        printWindow(w)
         return 0
     }
 }

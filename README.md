@@ -76,6 +76,7 @@ Sources/
   ANEBridge/       C bridge to ANE private APIs (runtime-resolved, no link-time dep)
   bench/           Swift package target (CLI: `bench`)
     Fingerprint.swift   S0 machine fingerprint (JSON key for cross-machine diffing)
+    Window.swift        per-run state snapshot (processes, sessions, load) — `bench state`
     S1_Memory.swift     S1 CPU/GPU/tensor memory bandwidth
     S2_GEMM.swift       S2 GEMM: MPS / custom MSL / TensorOps, 6 dtypes
     SpikeA.swift        S-A ANE direct-path feasibility spike (GO/NO-GO gate)
@@ -96,7 +97,8 @@ models/            generated model assets (gitignored)
 ## Run
 
 ```
-make probe            # S0 fingerprint
+make probe            # S0 fingerprint + run window (writes a record)
+make state            # print the run window alone (processes, sessions, load; ad hoc)
 make memory           # S1
 make gemm             # S2 (default: all sizes/dtypes/paths)
 make spike            # S-A ANE spike -> results/ane_spike.json (gates S3)
@@ -115,10 +117,12 @@ relative to the current working directory (fine for a local bench tool,
 but a `cd`-away will look like missing models / an empty results dir).
 
 Every run writes `results/<timestamp>-<fingerprint>.json` (schema
-`silicon-ledger/1`) containing the machine fingerprint, per-run
-median/mean/p95/min/max, and derived GFLOPS/TOPS/GB/s. Reports from the
-pre-rename era carry schema id `m5max-bench/1`; the fields are identical and
-still load (with a note on stderr).
+`silicon-ledger/1`) containing the machine fingerprint, the **run window**
+(what else was running — load, sessions, GUI presence, top processes; see
+[REPRODUCE.md](REPRODUCE.md#the-run-window)), per-run median/mean/p95/min/max,
+and derived GFLOPS/TOPS/GB/s. Reports from the pre-rename era carry schema id
+`m5max-bench/1`; the fields are identical and still load (with a note on
+stderr). Records written before the `window` field still load — it is optional.
 
 An unattended `bench all` completes in ~8 minutes on the calibration machine
 (excluding the one-time ~minute model generation by `tools/gen_models.py`).

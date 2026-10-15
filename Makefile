@@ -6,7 +6,7 @@ SWIFT := $(TB)/swift
 
 export SDKROOT := $(SDK)
 
-.PHONY: build probe memory gemm ane spike coreai coreml all clean venv stability
+.PHONY: build probe state memory gemm ane spike coreai coreml all clean venv stability
 
 build:
 	$(SWIFT) build -c release
@@ -19,6 +19,9 @@ tools/.venv/bin/python: tools/requirements.txt
 
 probe: build
 	.build/release/bench probe
+
+state: build
+	.build/release/bench state
 
 memory: build
 	.build/release/bench memory

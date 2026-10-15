@@ -70,6 +70,9 @@ struct ReportV1: Codable {
     var schema: String
     var generated: String
     var machine: MachineInfo
+    /// The run window: what else the machine was doing at capture time. Optional
+    /// so records written before this field still decode (and load fine).
+    var window: WindowSnapshot?
     var sections: [SuiteSection]
     var status: [String: String]
 

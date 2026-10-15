@@ -27,6 +27,58 @@ tolerances below for GPU rows. CPU write/triad deltas are band-dependent (see
 traps): the S1 primer guarantees GPU rows are steady-state, but CPU write
 placement is external-memory-pressure dependent.
 
+## The run window — declaring what was running
+
+**Identical environments are not achievable.** Two machines will never have
+exactly the same processes running: different daemons, different GUI state,
+different background jobs. Pretending otherwise is not a reproducibility claim,
+it is a hidden variable. The rule is therefore the owner's:
+
+> At some point we will never be able to have the exact same processes running
+> on different machines... A "fair" claim is to list the running processes.
+
+So **a fair cross-machine comparison declares what was running on each side and
+lets the reader judge.** Every record now carries a `window` block (schema
+`silicon-ledger/1`, field `window`) captured at the start of the run, and the
+same snapshot can be taken ad hoc on any machine before a manual run:
+
+```
+make state            # or: .build/release/bench state
+```
+
+It is read-only, non-root, and cheap (a second or two). It declares:
+
+| Field (`window.`) | Meaning |
+|---|---|
+| `captured`, `bootTime`, `uptimeSeconds` | when the snapshot was taken, and the machine's uptime then |
+| `loadAverage` | `[1m, 5m, 15m]` at capture |
+| `sessions`, `consoleSession` | output-equivalent of `who` — a GUI `console` login changes GPU/CPU behaviour and is called out explicitly |
+| `gui` | WindowServer / Dock / Finder / wallpaper / loginwindow / ControlCenter presence, plus `headless` — **a desktop machine is not headless, and that must be visible in the record** |
+| `topCPU` | top 10 processes by `%CPU` as `{pid, cpu, command}` (cumulative since process start) |
+| `watchlist` | known contention suspects currently running (Apple background ML/media/telemetry/sync, remote-session daemons). Presence is not guilt — activity is |
+| `sleepAssertions`, `preventSleepCount` | what is holding the machine awake during the run |
+| `powerSource`, `thermalState` | power source and thermal pressure at capture |
+| `fingerprint`, `host` | the owning machine — the block can never be read apart from its host |
+
+**How to use it.** Two records are only *directly* comparable when their
+declared windows are comparable. When they are not, **name the difference in
+the comparison instead of averaging over it** — a delta computed across
+different windows is a delta of the environments, not of the hardware. The
+values are the citation: quote `window.topCPU`, `window.loadAverage` and the
+`gui`/`sessions` flags alongside any cross-machine number.
+
+**Why a desktop matters (worked example).** The owner measured the load *from
+the GUI alone* on a Mac mini: a live desktop running WindowServer plus an
+animated wallpaper contributed roughly **0.7–1.0 to the load average**, with no
+benchmark and no user workload. A headless (SSH) capture of the same hardware
+does not carry that load. That gap is the size of the error a window-blind
+comparison silently absorbs. Capture headless when the claim is about the
+silicon; if you cannot, state it.
+
+**Not a benchmark.** The `window` block is an added *record field*, never a
+measurement: capturing it does not change what any stage measures, and it must
+not be read as a result.
+
 ## Pinning (v0 caveat)
 
 This file's `pin` is `file:` — i.e. the commands/expectations below are pinned

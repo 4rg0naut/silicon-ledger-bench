@@ -7,6 +7,7 @@ One JSON document per run. Top level:
   "schema":    "silicon-ledger/1",
   "generated": "2026-09-26T03:22:23Z",            // ISO-8601 UTC
   "machine":   { ...MachineInfo... },
+  "window":    { ...WindowSnapshot... },   // what else was running (optional on old files)
   "sections":  [ ...SuiteSection... ],
   "status":    { "s1_memory": "done", "spike": "GO" }   // per-suite state:
                                                         // done | ERROR <msg>
@@ -38,6 +39,34 @@ File name: `<generated, ":"->"-">-<machine.fingerprint>.json` in `results/`.
 **ANE chip id**: M4 session adds `chipId` here — use the framework's ANE class
 name/subtype string (`h16g`, `h17`) as `machine.chipId` (string). Consumers
 match cross-machine on `fingerprint`, read `chipId` for interpretation.
+
+## window (WindowSnapshot)
+
+Added 2026-10-15. The **run window** — what else the machine was doing when the
+numbers were taken (two machines never run identical process sets, so the record
+declares each side). Optional: absent on pre-2026-10-15 records and still decodes.
+Captured at the start of every run; also printed alone by `bench state`
+(`make state`). Read-only, non-root, ~1 s.
+
+| field | type | notes |
+|---|---|---|
+| `captured` | ISO-8601 | snapshot instant |
+| `bootTime` | ISO-8601 | boot instant (`kern.boottime`) |
+| `uptimeSeconds` | double | seconds since boot |
+| `loadAverage` | [double] | `[1m, 5m, 15m]` at capture |
+| `sessions` | [{user, tty, login}] | output-equivalent of `who` |
+| `consoleSession` | bool | a GUI/`console` login exists |
+| `gui` | {windowServer, dock, finder, wallpaper, loginwindow, controlCenter: bool, headless: bool} | `headless == !windowServer`; a live desktop is NOT headless |
+| `topCPU` | [{pid, cpu, command}] | top 10 by `%CPU` (cumulative since process start) |
+| `watchlist` | [string] | known contention suspects currently running |
+| `sleepAssertions` | [{pid, process, type, name}] | `pmset -g assertions` owners |
+| `preventSleepCount` | int | system-wide `Prevent*` assertion count |
+| `powerSource` | string | `"AC Power"` / `"Battery Power"` |
+| `thermalState` | string | nominal / fair / serious / critical |
+| `fingerprint`, `host` | string | owning machine — the block is never read orphaned from its host |
+
+See REPRODUCE.md ("The run window") for the comparability rule. This is an added
+record field, not a measurement.
 
 ## sections[] (SuiteSection)
 
