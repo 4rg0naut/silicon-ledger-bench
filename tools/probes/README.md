@@ -1,10 +1,12 @@
 # probes — the instruments behind the numbers
 
 Each tool builds with `clang` (or runs under stock `python3`) on macOS and needs no
-installation, no package manager, and (except where noted) no root. One exception is
-called out in its row: `latency_protocol.py` drives graphs through the Core AI runtime and
-needs `numpy`, so it is only usable where those are installed — it says so and stops rather
-than pretending.
+installation, no package manager, and (except where noted) no root. `latency_protocol.py`
+is the same: its default `--self-test` path is pure standard library and runs on any
+`python3`. Only its optional `--bundle` path drives graphs through the Core AI runtime
+(and that runtime's array package, `numpy`), so it is usable only where those are
+installed — that path imports them lazily, prints one line and exits non-zero rather than
+pretending.
 
 Everything here was written to answer one question honestly: **which engine did the work,
 and what did it cost** — on a machine whose OS gives no supported way to ask.
@@ -18,7 +20,7 @@ and what did it cost** — on a machine whose OS gives no supported way to ask.
 | `nax_ladder.m` | does a given tensor-tile shape compute correctly at all | `clang -fobjc-arc -O2 -o nax_ladder nax_ladder.m -framework Metal -framework Foundation` |
 | `canary.c` | a fixed-work CPU + memory canary, so a later session can be compared to this one | `clang -O0 -o canary canary.c` (`-O0` is the contract; `-O2` deletes the loops) |
 | `quiet_probe.sh` | the **window gate**: machine identity, suspect daemons, GPU idle floor, canary, and a loud verdict — run before trusting any measurement | `sh quiet_probe.sh [label]` (needs the sibling `enginemon` / `canary` binaries built above) |
-| `latency_protocol.py` | one latency convention (10 warm-up, 100 measured, p50/p95/min + ms/token) emitted as schema rows | `python3 latency_protocol.py --bundle <path> --seq-len N --model M --placement ANE --work-unit W --id ID` (requires `numpy` + `coreai.runtime`) |
+| `latency_protocol.py` | one latency convention (10 warm-up, 100 measured, p50/p95/min + ms/token) emitted as schema rows | `python3 latency_protocol.py --self-test` (stock `python3`, nothing to install); the optional Core AI path adds `--bundle <path> --seq-len N --model M --placement ANE --work-unit W --id ID` and needs the runtime |
 
 ## The two rules these tools enforce on themselves
 
