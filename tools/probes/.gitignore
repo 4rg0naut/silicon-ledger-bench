@@ -1,0 +1,9 @@
+# built from the sources beside them — never commit these
+enginemon
+canary
+ane-probe
+nax_load_ab
+nax_ladder
+nax_gemm
+# the gate writes its window snapshots here (repo-root results/, relative to this dir)
+../../results/
