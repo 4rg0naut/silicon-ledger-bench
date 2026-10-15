@@ -44,7 +44,7 @@ runs elsewhere.
 | engine | native operand dtypes (no emulation) | accum | accepted-but-emulated | rejected / fallback | anchor |
 |---|---|---|---|---|---|
 | **CPU** (Accelerate / vDSP / BNNS) | `fp32`, `fp16` (BNNS) — IEEE scalar fma is the reference | `fp32` | — | — | `compute-units-and-authoring.md:20` (`CPU (BNNS)` precision = fp32/fp16); `README.md` (CPU read via vDSP) |
-| **GPU shader / SIMT** (MSL) | `float` (fp32, exact), `half` (fp16); `simdgroup_matrix` over fp16 | `fp32` | — | fp32 is *native here* (that is the whole point) | `tools/probes/nax_load_ab.m:31` (exact-fp32 fma control); `tools/probes/na_tiles.metal` arm B (fp16 `simdgroup_matrix`) |
+| **GPU shader / SIMT** (MSL) | `float` (fp32, exact), `half` (fp16); `simdgroup_matrix` over fp16 | `fp32` | — | fp32 is *native here* (that is the whole point) | `tools/probes/nax_load_ab.m` `gemm_shader` (`--dtype float` = exact-fp32 fma control; `--dtype half` = fp16 operands, fp32 fma); `tools/probes/na_tiles.metal` arm B (fp16 `simdgroup_matrix`) |
 | **GPU tensor (NAX / MPP `matmul2d`)** | the header enumerates **48 dtype rows**: `half×half`, `half×int8/uint8`, `int8×int8`, bfloat mixes, plus 4-/2-bit (`int4b`, `uint4b`, `int2b`, `uint2b`) and `fp4_e2m1`, `fp8_e4m3`, `fp8_e5m2` | per the header's **dest** column: `half` **or** `float`; `int32` for `int8×int8`-class | **`fp32` operands** — reachable only with `relaxed_precision=true`, which "trades accuracy for speed", i.e. computes in **tf32** | dtype combinations outside the 48 rows | **API-168** (Apple `MPPTensorOpsMatMul2d.h`, 664 lines, macOS 27 SDK: 48-row table + `matmul2d_descriptor(m,n,k,tl,tr,relaxed_precision)`); `tensorops-quantized-kernels.md:149-155`; MLX hard-codes `relaxed_precision=true` at `tools/probes/nax_steel_gemm.metal:1069-1076` |
 | **ANE** (Neural Engine) | `fp16`; `int8`; `int16` | `fp32` (the 1×1-Conv engine accumulates in fp32) | `int4`/palettized are **storage**, not an arithmetic lane — a 4-bit value is a palette index into an fp16 codebook | **`fp32`** — any fp32 op/buffer "creates an f32 buffer that Neural Engine cannot execute" and falls back to GPU/CPU | LANDSCAPE-008; GOTCHAS-075(1); `compute-units-and-authoring.md:16,29` (Conv engine accumulates fp32; "No fp32 anywhere"); `ane-region-count-and-fp32-ops.md:83`; `ane-silicon-reference.md:33` |
 
@@ -81,10 +81,17 @@ A datapath delta requires **both arms on the same operand dtype and the same acc
 | NAX **tf32** (`fp32` + `relaxed_precision=true`) vs SIMT **exact fp32** fma | **no** | a **cross-precision** comparison — name the precision difference in the row; **do not** report it as a datapath delta |
 | **ANE fp16** vs **GPU fp16** | yes (fp16 operands, fp32 accum both sides) | an *engine* delta (not a datapath one — different engines, §1) |
 
-This is the live case: `tools/probes/nax_load_ab.m` runs the tensor arm as **fp32/tf32** and the
-shader arm as **exact fp32** (its own header says so, lines 14-16, and the oracle tolerance is set
-to `5e-3` for tf32 vs `1e-6` for the shader). The `275 µs vs 2561 µs`, `13.8 vs 183.3 mJ` rows
-(`REPRODUCE.md`, 2026-10-15) are therefore **cross-precision**, and must be labelled that way.
+This was the live case, and it has since been fixed in the tool. Until 2026-10-15,
+`tools/probes/nax_load_ab.m` ran the tensor arm as **fp32/tf32** and the shader arm as **exact fp32**
+and set the oracle tolerance per-arm (`5e-3` for tf32 vs `1e-6` for the shader), so the
+`275 µs vs 2561 µs`, `13.8 vs 183.3 mJ` rows (`REPRODUCE.md`, 2026-10-15) are **cross-precision** and
+must be labelled that way.
+
+The tool now **defaults to** the Rule-1 "yes" row: both arms take `half` operands and accumulate in
+`fp32` (`dtype=half accumulate=fp32 native_match=yes`, oracle `rel ≤ 1e-4`, run at 1024³). Every row
+prints `dtype=`, `accumulate=` and `native_match=`; the old fp32/tf32-vs-exact-fp32 arm is retained
+only under an explicit `--dtype float`, where the tool prints `native_match=no` plus a line stating
+the comparison is cross-precision and that accuracy must not be compared between the arms.
 
 ### Rule 2 — When no counterpart exists ("when there are")
 
@@ -101,7 +108,9 @@ GEMM**, and the ANE has **no fp32 GEMM at all** (§2). Then:
 ### Rule 3 — Accuracy vs timing are reported under different conditions
 
 - **Matched-arithmetic arms** (Rule 1 "yes") *may* report a `maxabs` / `rel` delta — and must, as the
-  correctness gate. There it is a real error bar (expect ≈0 for exactly-representable data).
+  correctness gate. There it is a real error bar: `nax_load_ab`'s matched fp16 pair prints a non-zero
+  `maxabs` (steel `2.58e-06`, shader `4.27e-06` at 1024³, `rel ≈ 5e-7–8e-7`) against a shared
+  `rel ≤ 1e-4` bound, driven only by fp32 summation order at K=1024.
 - **Cross-precision arms** (Rule 1 "no") may report **time and energy only**. Any `maxabs` printed
   beside them is the *precision difference*, not an error of either arm — print it **named as such**
   (the probe already does: the tf32 tolerance `5e-3`), never as "the fast arm is wrong".
@@ -128,7 +137,7 @@ the primary citation. Paths without a repo prefix are relative to the silicon-le
 | API-167 / API-130 | the framework ships `MPPTensorOpsMatMul2d.h`/`MPPTensorOpsConv2d.h`; ANE placement dtype whitelist `fp16/f8E4M3/si8/ui8/si16/ui16` read out of a plan manifest. |
 | LANDSCAPE-008 | "Core AI supports only fp16, int8 and int16 tensor types for ANE execution, and any fp32 op creates a buffer the Neural Engine cannot execute and hence falls back to GPU or CPU." |
 | GOTCHAS-075 | measured placement rule: keep the ANE data path fp16; int32/bool plumbing is placed on CPU. |
-| `tools/probes/nax_load_ab.m` | lines 14-16: tensor arm = tf32, SIMT arm = exact fp32, tolerance per-arm. |
+| `tools/probes/nax_load_ab.m` | header + row labels: default pair is `dtype=half accumulate=fp32 native_match=yes`, oracle `rel ≤ 1e-4`; `--dtype float` = the old tensor-tf32 vs exact-fp32 arm, prints `native_match=no` and a cross-precision warning. |
 | `tools/probes/nax_steel_gemm.metal` | lines 1069-1076: MLX `matmul2d_descriptor(...)` hard-codes `relaxed_precision=true`. |
 | `tensorops-quantized-kernels.md:149-155` | MPP dtype table (activations × weights → dest); "native in-kernel dequant". |
 | `compute-units-and-authoring.md:16,20,29` | ANE Conv engine accumulates fp32; ANE = fp16 only; CPU(BNNS) = fp32/fp16. |
@@ -141,8 +150,14 @@ the primary citation. Paths without a repo prefix are relative to the silicon-le
 
 - **The exact accumulate behaviour of the MPP `float` destination** (`half×half→float`): the header
   gives the *destination* type, and `relaxed_precision` names the tf32 trade — but whether an fp32
-  destination accumulates in fp32 vs tf32 is **INFERENCE** from the destination type, not a measured
-  cell. Do not upgrade it to a measurement without a bench.
+  destination accumulates in fp32 vs tf32 remains **INFERENCE** from the destination type. Partial
+  measured evidence now exists: `nax_load_ab`'s fp16 pair gates the tensor arm against a double
+  oracle at K=1024 and sees `rel ≈ 5e-7` (`maxabs 2.58e-06`) over 4096 sampled outputs, which is
+  **inconsistent with a ≤10-bit-mantissa accumulator** (a tf32 or fp16 accumulator would show
+  `rel` of order 1e-3–1e-2). That rules *out* tf32/fp16 accumulation; it does **not** prove fp32
+  rather than anything wider, and it does not read the accumulate type directly. So the tensor arm's
+  `accumulate=fp32` row label is *inference + this bound*, not a header read — do not upgrade the cell
+  itself to a measurement.
 - **Which of the 48 MPP rows are *fast*** (vs merely accepted): unmeasured. API-168's caveat stands.
 - **ANE int16 accumulate**: LANDSCAPE-008 lists int16 as an accepted tensor type; the accumulate
   type for an int16 GEMM is not in any anchor we hold — left blank above rather than guessed.

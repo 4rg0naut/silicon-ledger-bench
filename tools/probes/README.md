@@ -15,7 +15,7 @@ and what did it cost** — on a machine whose OS gives no supported way to ask.
 | --- | --- | --- |
 | `enginemon.c` | which engine ran: CPU / GPU-shader / GPU-NA / ANE, unprivileged | `clang -O2 -o enginemon enginemon.c -framework CoreFoundation` |
 | `ane-probe.m` | what the private framework on *this* machine actually exposes (classes, selectors, the constant table) | `clang -O2 -o ane-probe ane-probe.m -framework Foundation` |
-| `nax_load_ab.m` | matched A/B between the GPU tensor units and a shader path, per-GEMM time and energy | `clang -fobjc-arc -O2 -o nax_load_ab nax_load_ab.m -framework Metal -framework Foundation` |
+| `nax_load_ab.m` | native-for-native A/B between the GPU tensor units and a SIMT shader path: default is the matched fp16 pair (`dtype=half accumulate=fp32 native_match=yes`), per-GEMM time; `--dtype float` is the opt-in cross-precision arm (`native_match=no`) | `clang -fobjc-arc -O2 -o nax_load_ab nax_load_ab.m -framework Metal -framework Foundation` |
 | `nax_steel_gemm.metal` | the kernel the tensor arm actually runs (required beside `nax_load_ab`) | — (source input; see its licence header) |
 | `nax_ladder.m` | does a given tensor-tile shape compute correctly at all | `clang -fobjc-arc -O2 -o nax_ladder nax_ladder.m -framework Metal -framework Foundation` |
 | `canary.c` | a fixed-work CPU + memory canary, so a later session can be compared to this one | `clang -O0 -o canary canary.c` (`-O0` is the contract; `-O2` deletes the loops) |

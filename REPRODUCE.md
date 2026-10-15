@@ -126,6 +126,20 @@ New probes live in `tools/probes/` (build lines in its README). These rows were 
 library in the path: MSL compiled at runtime by the probe itself, both arms gated on a CPU oracle
 before any timing was read. Target: same M5 Max, macOS 27.0.1 (26A434).
 
+> **Correction (2026-10-15, added the same day — rows below left intact).** These rows came from the
+> *old* configuration of `tools/probes/nax_load_ab.m`, whose two arms were **not precision-matched**:
+> the tensor arm ran **fp32 operands → tf32** and the shader arm **exact fp32**. "Matched A/B" in the
+> heading below is therefore wrong for these rows — they are a **cross-precision** comparison, and
+> `maxabs = 0` is a property of the small-integer operands (an exactly-representable dot product),
+> **not** evidence that the two arms agree. Read the table with `native_match=no` attached.
+> Two further corrections to the heading: it says "128 threads", but the steel arm is 256 threads
+> (the old shader arm dispatched 256 threads too, in a 32×8 block); and `even the tf32 tensor path is
+> exact here` is a statement about the *cross-precision* arm, not about the tool's default.
+> The probe now **defaults to a native-for-native fp16 pair** (`dtype=half accumulate=fp32
+> native_match=yes`, `rel ≤ 1e-4`) and prints `native_match=no` plus a cross-precision warning for
+> the retained `--dtype float` arm. Numbers that should be compared as a datapath delta must be
+> re-measured on the matched pair.
+
 **Matched A/B, one 1024³ fp32 GEMM per dispatch, 128 threads, same operands.**
 
 | arm | kernel | median / GEMM | GFLOPS | mean GPU power | mJ / GEMM |
