@@ -120,6 +120,38 @@ ONE weights entry; multi-entry dicts fail ANECCompile with InvalidMILProgram
    design reuses one program per config. Re-running `bench ane` inside one
    process past the cap yields spurious compile failures.
 
+## 2026-10-15 additions — the GPU tensor-unit path, measured bare-metal
+
+New probes live in `tools/probes/` (build lines in its README). These rows were produced with no
+library in the path: MSL compiled at runtime by the probe itself, both arms gated on a CPU oracle
+before any timing was read. Target: same M5 Max, macOS 27.0.1 (26A434).
+
+**Matched A/B, one 1024³ fp32 GEMM per dispatch, 128 threads, same operands.**
+
+| arm | kernel | median / GEMM | GFLOPS | mean GPU power | mJ / GEMM |
+| --- | --- | ---: | ---: | ---: | ---: |
+| tensor | MLX Steel `gemm_loop` (64×128×256 tile) | **275 µs** | **7808** | 50.2 W | **13.8** |
+| shader | naive fp32 fma, 1 thread/element | 2561 µs | 838 | 71.6 W | 183.3 |
+
+Both arms `maxabs = 0` (small-integer data is exactly representable, so even the tf32 tensor path is
+exact here). **Read the ratio, not just the win: against a *naive* SIMT kernel the tensor path is
+9.3× faster and 13.3× cheaper per GEMM; against an optimised SIMT kernel (`Steel64`, MetalHLO's
+runner) the same shapes gave 2.3×.** Both are true and they bracket the answer.
+
+**Dtype at the same shape (M=1024³, k=v1 steel):** fp16 3.00 ms / 197 mJ per GEMM versus fp32
+10.73 ms / 706 mJ — a **3.6× ratio visible in both timing and energy**. Energy tracking timing 1:1 is
+the cross-check that makes the energy arm usable.
+
+**Idle floor matters more than any of it.** Two adjacent idle windows on the same machine measured
+**40 / 84 mW** GPU energy headless, versus ~115 mW with a display-attached load and 426 mW in the
+2026-10-08 reference session. Run the window gate (`tools/probes/quiet_probe.sh`) and record the floor *in the same session* as the
+measurement; an energy row without its own baseline is not comparable to anything.
+
+**What not to trust.** A window that is mostly setup measures setup: the earlier version of this
+probe reported `mJ_per_GEMM` swinging 2.2× between identical runs because only ~5% of the window was
+GEMM work. `duty = GPU work / window` is now printed with every row and rows below 0.30 are refused.
+Same rule as the dispatch floor above, one layer out.
+
 ## Validation contract
 
 No reported number was eyeballed: every throughput row was produced only if a
