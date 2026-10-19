@@ -177,14 +177,33 @@ struct CoreAISuite {
                 section.notes.append("\(model)/\(variant): function 'main' not found (functions: \(modelObj.functionNames))")
                 return
             }
-            let (input, flopsFallback) = makeInput(for: model)
+            var (input, flopsFallback) = makeInput(for: model)
             var flops = flopsFallback
+            var inShape: [Int]? = nil
             if let vd = try? Data(contentsOf: url.deletingPathExtension().appendingPathExtension("verify.json")),
-               let vs = try? JSONSerialization.jsonObject(with: vd) as? [String: Any],
-               let f = vs["flops"] as? Double {
-                flops = f
+               let vs = try? JSONSerialization.jsonObject(with: vd) as? [String: Any] {
+                if let f = vs["flops"] as? Double { flops = f }
+                if let s = vs["in_shape"] as? [NSNumber] { inShape = s.map { $0.intValue } }
             }
-            let shape = inputShape(for: model)
+            let shape = inShape ?? inputShape(for: model)
+            let inCount = shape.reduce(1, *)
+            if input.count != inCount {
+                guard inCount > 0 else {
+                    section.notes.append("\(model)/\(variant): in_shape product is 0 — bad verify.json")
+                    return
+                }
+                let xbin = url.deletingLastPathComponent().appendingPathComponent("\(model).x.bin")
+                if let xd = try? Data(contentsOf: xbin) {
+                    guard xd.count == inCount * 4 else {
+                        section.notes.append("\(model)/\(variant): \(model).x.bin is \(xd.count) bytes, expected \(inCount * 4)")
+                        return
+                    }
+                    input = xd.withUnsafeBytes { Array($0.bindMemory(to: Float.self)) }
+                } else {
+                    section.notes.append("\(model)/\(variant): input count \(input.count) != shape \(inCount) and no \(model).x.bin in model dir")
+                    return
+                }
+            }
 
             var outName = "out"
             let names = fn.descriptor.outputNames
