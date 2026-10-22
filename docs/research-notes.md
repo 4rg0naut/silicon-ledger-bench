@@ -476,3 +476,58 @@ stands unchanged: one entry with unlimited references (up to 384 measured)
 compiles and runs. Re-derivation of the per-file penalty on H17 would
 require porting the arms to the bundle-compile path (orion-style
 `ANECompiler` XPC) — out of scope for this harness.
+
+## R8.2 — nax_ladder GM retest + poison extension (2026-10-22, macOS 27.0.1 / 26A434)
+
+Context: the NCM campaign needed written-zero vs never-written attribution
+for apple10 tensor-op failures. `tools/probes/nax_ladder.m` was extended
+(0xDEADDEAD C pre-fill + NCM-geometry arms: fp32 out-of-table, tf32
+relaxed=true, device destination, strides third-arg, K=256 dynamic, K=256
+4-chunk accumulate loop) and run on the GM toolchain. Ledger:
+`results/2026-10-22T12-37-03Z-bda452aabd60bf26.json` (nax_probe_matrix).
+
+Findings:
+
+- **The classic buffer-backed + MTL3-dispatch documented form fails at
+  SINGLE TILE**: 1x1 64x32x64 fp16 = 1056 NaN + 992 unwritten(poison), 0
+  exact. The PRISTINE Oct-10 probe (git HEAD, re-run today) fails
+  identically (1056 bad + 992 zeros-where-nonzero), so this is the platform,
+  not the new arm code. Removing the `.version4_0` pin does not change the
+  outcome. OS timeline (web-sourced, not guessed): macOS 27.0.1 (26A434)
+  shipped 2026-09-28 with UNSPECIFIED bug fixes and no release-notes page
+  (developer.apple.com/news/releases 09282026c; osxdaily 2026-09-28), and
+  the Oct-21 bench ledger + today's sw_vers both read 26A434 - so the
+  Oct-10 run was already on 27.0.1 and its header-comment "single-tile PASS"
+  was either mis-recorded or run against different inputs/flags we can no
+  longer reproduce. As of today the classic form is NOT-KNOWN-GOOD at any
+  tiling.
+- M5-specific context for why M4-era notes don't transfer: on M5/A19 the
+  tensor path targets the new Neural Accelerators (WWDC26 session 330),
+  whereas Rigel (arXiv:2606.12765) proved matmul2d lowers to
+  simdgroup_matrix/ALU on M4 - a different lowering, and Rigel's own
+  documented law there ("tensor_inline slice() does not offset reads; only
+  the (0,0) tile computes correctly") matches our multi-tile/multi-K zero
+  family regardless of generation. Also SDK-side: the MPP tensor-ops
+  headers ship with macOS, not Xcode (ComfyUI-AppleSilicon-FP8 README), so
+  point releases can silently move this ground.
+- TRIVIAL non-MPP control (same buffers/dispatch) writes every cell finite:
+  the fault is inside matmul2d lowering/dispatch for this form, not harness
+  plumbing.
+- Device-destination arm: all-NaN, confirming the Oct-10 note.
+- fp32 out-of-table and tf32 arms on this path produce **partial miscompute**
+  (976/2048 bad), not the clean written-zero the MTL4 tensor-object path
+  produces (NCM results/2026-10-22T11-31-39Z): the silent-failure MECHANISM
+  is invocation-form dependent. FB package updated accordingly.
+- strides third-arg to `tensor_inline` is now **compile-rejected**
+  ("no matching constructor") — the silent-misread mine in older notes is
+  fixed at compile time by the SDK; the misread-NaN anecdote is historical.
+- Multi-K (dynamic K=256 and 4-chunk accumulate loop): unattributable on a
+  path whose single-tile baseline is already corrupt; clean multi-K evidence
+  remains the MTL4 arms (written-zero 2048).
+- Cross-path summary for 27.0.1: MTL4 tensor-object path fp16 single-tile
+  ok 4.7e-07 (NCM probe, same day) — the trainer lane is unaffected; the
+  classic buffer form is quarantined pending a radar answer (FB pending).
+
+Build note: the extended probe needs `clang++ ... -x objective-c++ -std=c++17`
+(raw-string MSL + the linker's C++ personality); plain `clang` .m builds the
+old form only by permissiveness.
