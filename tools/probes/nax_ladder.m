@@ -22,8 +22,12 @@
 //              OWN source so the harness survives an API rejection.
 //   Multi-tile store-skip retest: the original 1x1..4x4 grid ladder, now poison-classified.
 //
-// build: clang -fobjc-arc -O2 -x objective-c++ -std=c++17 -o nax_ladder nax_ladder.m -framework Metal -framework Foundation
+// build: clang -fobjc-arc -O2 -x objective-c++ -std=c++17 -o nax_ladder nax_ladder.m -framework Metal -framework Foundation -lc++
 // run:   ./nax_ladder
+//   NAX_TRIVIAL=1   control arm: identical plumbing, non-MPP kernel — every cell must
+//                   land FINITE and written; isolates harness plumbing from MPP lowering
+//                   (the R8.2 isolation proof; keep runnable for future OS retests).
+//   NAX_METALLIB=p  load the offline-compiled metallib at p instead of runtime MSL source.
 #import <Foundation/Foundation.h>
 #import <Metal/Metal.h>
 
@@ -279,7 +283,11 @@ static int run_case(id<MTLDevice> dev, id<MTLFunction> fn, const char *label,
                         want += (float)((((long)gm * K + k) % 7) - 3) *
                                 (float)((((long)k * N + gn) % 5) - 2);
                     float got = C[(size_t)gm * N + gn];
-                    if (*(uint32_t *)&got == poison) unwritten++;
+                    uint32_t gotbits;
+                    memcpy(&gotbits, &got, sizeof(gotbits));
+                    // check order: a true result with the exact 0xDEADDEAD bit pattern would
+                    // count as unwritten — negligible with the small-integer oracle.
+                    if (gotbits == poison) unwritten++;
                     else if (!isfinite(got)) nan++;
                     else if (got == 0.0f && want != 0.0f) zeros++;
                     else if (got != want) bad++;
@@ -315,9 +323,49 @@ int main(void) {
         // MetalHLO pins .version4_0 for MPP tensor kernels (MetalHLOCompiler.swift:407);
         // 4_1 was what this host used when it produced NaN.
         opts.languageVersion = MTLLanguageVersion4_0;
-        id<MTLLibrary> lib = [dev newLibraryWithSource:[NSString stringWithUTF8String:SRC]
-                                               options:opts error:&err];
-        if (!lib) { printf("runtime MSL compile FAIL: %s\n", err.localizedDescription.UTF8String); return 1; }
+        if (getenv("NAX_TRIVIAL")) {   // control: identical plumbing, NO MPP — R8.2 isolation proof
+            static const char *TRIV = R"MSL(
+#include <metal_stdlib>
+using namespace metal;
+kernel void nax_trivial(device half *A [[buffer(0)]], device half *B [[buffer(1)]],
+                        device float *C [[buffer(2)]], constant uint &M [[buffer(3)]],
+                        constant uint &N [[buffer(4)]], constant uint &K [[buffer(5)]],
+                        uint2 tgid [[threadgroup_position_in_grid]]) {
+    for (uint m = 0; m < 64; m++)
+        for (uint n = 0; n < 32; n++) {
+            uint gm = tgid.y * 64 + m, gn = tgid.x * 32 + n;
+            C[(size_t)gm * N + gn] = (float)A[(size_t)gm * K] + (float)B[gn];  // non-MPP write
+        }
+}
+)MSL";
+            NSError *e2 = nil;
+            id<MTLLibrary> l2 = [dev newLibraryWithSource:[NSString stringWithUTF8String:TRIV]
+                                                  options:opts error:&e2];
+            printf("TRIVIAL kernel: %s\n", l2 ? "compiled" : e2.localizedDescription.UTF8String);
+            if (!l2) return 1;
+            id<MTLFunction> f2 = [l2 newFunctionWithName:@"nax_trivial"];
+            run_case(dev, f2, "trivial-nonMPP", 2, 2, 64, 0);
+            printf("(expect NO-GO vs the MPP oracle; the load-bearing invariant is unwritten=0 — "
+                   "every cell WRITTEN via plain stores. nan here is expected: raw int bits read "
+                   "as half. Any never-written implicates plumbing, not matmul2d)\n");
+            return 0;
+        }
+        const char *libPath = getenv("NAX_METALLIB");
+        id<MTLLibrary> lib = nil;
+        if (libPath) {
+            NSData *d = [NSData dataWithContentsOfFile:[NSString stringWithUTF8String:libPath]];
+            if (!d) { printf("metallib unreadable: %s\n", libPath); return 1; }
+            dispatch_data_t dd = dispatch_data_create(d.bytes, d.length,
+                                                      dispatch_get_main_queue(),
+                                                      DISPATCH_DATA_DESTRUCTOR_DEFAULT);
+            lib = [dev newLibraryWithData:dd error:&err];
+            printf("library source: OFFLINE metallib %s\n", libPath);
+        } else {
+            lib = [dev newLibraryWithSource:[NSString stringWithUTF8String:SRC]
+                                     options:opts error:&err];
+            printf("library source: runtime MSL compile\n");
+        }
+        if (!lib) { printf("compile/load FAIL: %s\n", err.localizedDescription.UTF8String); return 1; }
         printf("runtime MSL compile: OK\n");
 
         // ---- original ladder: multi-tile store-skip grid (now poison-classified) ----
@@ -350,7 +398,7 @@ int main(void) {
         id<MTLLibrary> lstr = [dev newLibraryWithSource:[NSString stringWithUTF8String:SRC_STR]
                                                 options:opts error:&serr];
         if (!lstr) {
-            printf("ARM k_str            compile-rejected: %s\n",
+            printf("ARM %-16s compile-rejected: %s\n", "k_str",
                    serr.localizedDescription.UTF8String);
         } else {
             id<MTLFunction> fs = [lstr newFunctionWithName:@"k_str"];
