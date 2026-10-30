@@ -1,3 +1,7 @@
+# APPLIED 2026-10-28 — changes are baked into committed qwen3_decode.c.
+# Do NOT re-run: the anchor below still matches the patched file, so a
+# second run duplicates the arena block (compile error). Kept as provenance
+# of how the patch was generated; see FAILURES.md / QUEUES.md.
 import sys
 s = open('qwen3_decode.c').read()
 anchor = 'static mlx_array NIL(void) { return mlx_array_new(); }'

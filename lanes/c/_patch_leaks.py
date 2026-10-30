@@ -1,3 +1,5 @@
+# APPLIED 2026-10-28 — changes are baked into committed qwen3_decode.c.
+# Do NOT re-run (provenance only; see lanes/c/_patch_arena.py header).
 s = open('qwen3_decode.c').read()
 
 # 1. NIL inside step region allocates arena-registered empties
