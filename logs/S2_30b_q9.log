@@ -1,0 +1,27 @@
+{
+  "build_mode" : "release",
+  "decode" : {
+    "note" : "non-streaming respond(); tokens via re-tokenizing output; session prompt overhead included",
+    "runs" : [
+      {
+        "chars" : 0,
+        "tokens_retokenized" : 0,
+        "wall_s" : 0.60676205158233643,
+        "wall_tps" : 0
+      },
+      {
+        "chars" : 0,
+        "tokens_retokenized" : 0,
+        "wall_s" : 0.50194501876831055,
+        "wall_tps" : 0
+      }
+    ]
+  },
+  "lane" : "l2",
+  "max_tokens" : 64,
+  "model" : "mlx-community\/Qwen3-30B-A3B-4bit",
+  "peak_memory_bytes" : 34479872536,
+  "peak_memory_GB" : 34.479872536000002,
+  "version" : "swift-mlm 3.32.3 \/ mlx-swift 0.32.3",
+  "wired_bytes" : 0
+}

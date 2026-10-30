@@ -1,0 +1,1 @@
+{"lane":"l4","build_mode":"release","model_kind":"qwen3_dense","hidden":2048,"layers":28,"decode_steps":768,"mean_step_ms":7.046,"p50_step_ms":6.919,"p95_step_ms":8.259,"mean_decode_tps_wall":141.92,"peak_memory_bytes":4509374628}

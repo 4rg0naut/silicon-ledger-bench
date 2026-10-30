@@ -10,3 +10,10 @@ tools/pip_install.log
 *.o
 *.air
 *.metallib
+lanes/rust/target/
+lanes/c/qwen3_decode
+lanes/c/qwen3_decode_*
+lanes/c/gpu_probe*
+!lanes/c/*.c
+!results/*.json
+!results/raw/

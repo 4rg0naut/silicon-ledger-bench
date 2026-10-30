@@ -1,0 +1,14 @@
+rope_theta 1000000.0
+rms_eps 0.000001000000
+model_type qwen3
+quant_group 64
+quant_bits 4
+safetensors /Users/chris/.cache/huggingface/hub/models--mlx-community--Qwen3-1.7B-4bit/snapshots/3b1b1768f8f8cf8351c712464f906e86c2b8269e/model.safetensors
+hidden_size 2048
+num_hidden_layers 28
+num_attention_heads 16
+num_key_value_heads 8
+head_dim 128
+intermediate_size 6144
+vocab_size 151936
+max_position_embeddings 40960

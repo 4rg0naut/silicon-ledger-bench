@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/python/l0m_microbench.py", line 206, in <module>
+    main()
+  File "/Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/python/l0m_microbench.py", line 183, in main
+    tok = decode_step(ctx, ws, cfg, tok, t)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/python/l0m_microbench.py", line 139, in decode_step
+    xb = r2.reshape(1, 1, cfg["hidden"]).broadcast_to((cfg["top_k"], 1, cfg["hidden"]))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'mlx.core.array' object has no attribute 'broadcast_to'

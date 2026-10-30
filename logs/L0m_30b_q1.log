@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/python/l0m_microbench.py", line 205, in <module>
+    main()
+  File "/Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/python/l0m_microbench.py", line 167, in main
+    ws = load_weights(cfg["shards"])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/python/l0m_microbench.py", line 52, in load_weights
+    ws.update(dict(mx.load(p)))
+                   ^^^^^^^^^^
+RuntimeError: [load_safetensors] Failed to open file /Users/chris/.cache/huggingface/hub/models--mlx-community--Qwen3-30B-A3B-4bit/snapshots/d388dead1515f5e085ef7a0431dd8fadf0886c57/model.safetensors

@@ -1,0 +1,796 @@
+{
+ "schema": "silicon-ledger/1",
+ "generated": "2026-10-28T04-07-19Z",
+ "machine": {
+  "ane": {
+   "ane_compiler_xpc": true,
+   "aned_daemon": true,
+   "coreai_framework": true,
+   "coreml_mlmodel": true,
+   "framework_loadable": true,
+   "inmemory_classes": true,
+   "request_class": true
+  },
+  "chip": "Apple M5 Max",
+  "cpuCores": {
+   "perflevel0": 6,
+   "perflevel1": 12,
+   "total": 18
+  },
+  "fingerprint": "bda452aabd60bf26",
+  "gpuCores": 40,
+  "gpuName": "Apple M5 Max",
+  "host": "studio.local",
+  "memoryGB": 128,
+  "metalFamilies": [
+   "apple1",
+   "apple2",
+   "apple3",
+   "apple4",
+   "apple5",
+   "apple6",
+   "apple7",
+   "apple8",
+   "apple9",
+   "apple10"
+  ],
+  "metalTensor": {
+   "bf16": true,
+   "fp16": true,
+   "fp32": true,
+   "fp4e2m1": true,
+   "fp8e4m3": true,
+   "fp8e5m2": true,
+   "int4": true,
+   "int8": true
+  },
+  "model": "Mac Studio",
+  "osBuild": "26A434",
+  "osVersion": "27.0.1",
+  "tools": {
+   "aimodelc": "present",
+   "coreai-torch": "0.4.3",
+   "coremlc": "present",
+   "python": "Python 3.11.16",
+   "swift_clt": "Target: arm64-apple-macosx27.0.0",
+   "swift_xcode": "Target: arm64-apple-macosx27.0.0"
+  }
+ },
+ "sections": [
+  {
+   "id": "s6_llm_lane_matrix",
+   "title": "LLM host-language lane matrix (Swift/C/Rust/Python microbench vs mlx_lm) on M5 Max, Qwen3 dense+MoE",
+   "runs": [
+    {
+     "name": "decode_qwen3-1.7b-4bit",
+     "variant": "l0",
+     "config": {
+      "model": "mlx-community/Qwen3-1.7B-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=0 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "dense"
+     },
+     "unit": "ms",
+     "iters": 768,
+     "median": 6.007,
+     "mean": 5.293,
+     "p95": 6.989,
+     "min": 1.66,
+     "max": 8.009,
+     "derived": {
+      "tps_wall": 188.92,
+      "peak_GB": 1.913,
+      "load_s": 0.53
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill32_qwen3-1.7b-4bit",
+     "variant": "l0",
+     "config": {
+      "prompt_tokens": "32"
+     },
+     "unit": "tps",
+     "iters": 32,
+     "median": 35.468,
+     "mean": 35.468,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 902.23
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill512_qwen3-1.7b-4bit",
+     "variant": "l0",
+     "config": {
+      "prompt_tokens": "512"
+     },
+     "unit": "tps",
+     "iters": 512,
+     "median": 63.614,
+     "mean": 63.614,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 8048.56
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill2048_qwen3-1.7b-4bit",
+     "variant": "l0",
+     "config": {
+      "prompt_tokens": "2048"
+     },
+     "unit": "tps",
+     "iters": 2048,
+     "median": 177.499,
+     "mean": 177.499,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 11538.09
+     },
+     "status": "ok"
+    },
+    {
+     "name": "decode_qwen3-30b-a3b-4bit",
+     "variant": "l0",
+     "config": {
+      "model": "mlx-community/Qwen3-30B-A3B-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=0 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "dense"
+     },
+     "unit": "ms",
+     "iters": 768,
+     "median": 8.236,
+     "mean": 8.701,
+     "p95": 9.11,
+     "min": 6.809,
+     "max": 71.284,
+     "derived": {
+      "tps_wall": 114.931,
+      "peak_GB": 18.139,
+      "load_s": 3.95
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill32_qwen3-30b-a3b-4bit",
+     "variant": "l0",
+     "config": {
+      "prompt_tokens": "32"
+     },
+     "unit": "tps",
+     "iters": 32,
+     "median": 66.985,
+     "mean": 66.985,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 477.72
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill512_qwen3-30b-a3b-4bit",
+     "variant": "l0",
+     "config": {
+      "prompt_tokens": "512"
+     },
+     "unit": "tps",
+     "iters": 512,
+     "median": 138.196,
+     "mean": 138.196,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 3704.88
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill2048_qwen3-30b-a3b-4bit",
+     "variant": "l0",
+     "config": {
+      "prompt_tokens": "2048"
+     },
+     "unit": "tps",
+     "iters": 2048,
+     "median": 412.236,
+     "mean": 412.236,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 4968.03
+     },
+     "status": "ok"
+    },
+    {
+     "name": "decode_qwen3-4b-4bit",
+     "variant": "l0",
+     "config": {
+      "model": "mlx-community/Qwen3-4B-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=0 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "dense"
+     },
+     "unit": "ms",
+     "iters": 768,
+     "median": 8.955,
+     "mean": 8.461,
+     "p95": 9.913,
+     "min": 5.133,
+     "max": 10.954,
+     "derived": {
+      "tps_wall": 118.195,
+      "peak_GB": 3.298,
+      "load_s": 0.87
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill32_qwen3-4b-4bit",
+     "variant": "l0",
+     "config": {
+      "prompt_tokens": "32"
+     },
+     "unit": "tps",
+     "iters": 32,
+     "median": 48.059,
+     "mean": 48.059,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 665.85
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill512_qwen3-4b-4bit",
+     "variant": "l0",
+     "config": {
+      "prompt_tokens": "512"
+     },
+     "unit": "tps",
+     "iters": 512,
+     "median": 116.698,
+     "mean": 116.698,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 4387.4
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill2048_qwen3-4b-4bit",
+     "variant": "l0",
+     "config": {
+      "prompt_tokens": "2048"
+     },
+     "unit": "tps",
+     "iters": 2048,
+     "median": 374.395,
+     "mean": 374.395,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 5470.16
+     },
+     "status": "ok"
+    },
+    {
+     "name": "decode_qwen3-1.7b-4bit",
+     "variant": "l0m",
+     "config": {
+      "model": "qwen3-1.7b-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=768 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "qwen3"
+     },
+     "unit": "ms",
+     "iters": 768,
+     "median": 3.364,
+     "mean": 3.367,
+     "p95": 3.508,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "tps_wall": 296.98,
+      "peak_GB": 1.643
+     },
+     "status": "ok"
+    },
+    {
+     "name": "decode_qwen3-30b-a3b-4bit",
+     "variant": "l0m",
+     "config": {
+      "model": "qwen3-30b-a3b-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=768 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "qwen3_moe"
+     },
+     "unit": "ms",
+     "iters": 768,
+     "median": 7.466,
+     "mean": 7.537,
+     "p95": 7.935,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "tps_wall": 132.67,
+      "peak_GB": 17.828
+     },
+     "status": "ok"
+    },
+    {
+     "name": "decode_qwen3-4b-4bit",
+     "variant": "l0m",
+     "config": {
+      "model": "qwen3-4b-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=768 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "qwen3"
+     },
+     "unit": "ms",
+     "iters": 768,
+     "median": 7.071,
+     "mean": 9.402,
+     "p95": 22.179,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "tps_wall": 106.36,
+      "peak_GB": 3.11
+     },
+     "status": "ok"
+    },
+    {
+     "name": "decode_qwen3-1.7b-4bit",
+     "variant": "l1",
+     "config": {
+      "model": "mlx-community/Qwen3-1.7B-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=0 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "dense"
+     },
+     "unit": "ms",
+     "iters": 768,
+     "median": 2.8150081634521484,
+     "mean": 2.816153040119246,
+     "p95": 2.9439926147460938,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "tps_wall": 355.0943381818683,
+      "peak_GB": 1.937
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill43_qwen3-1.7b-4bit",
+     "variant": "l1",
+     "config": {
+      "prompt_tokens": "43"
+     },
+     "unit": "tps",
+     "iters": 43,
+     "median": 281.15,
+     "mean": 281.15,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 152.94327774472887
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill577_qwen3-1.7b-4bit",
+     "variant": "l1",
+     "config": {
+      "prompt_tokens": "577"
+     },
+     "unit": "tps",
+     "iters": 577,
+     "median": 163.458,
+     "mean": 163.458,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 3529.956414374126
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill2283_qwen3-1.7b-4bit",
+     "variant": "l1",
+     "config": {
+      "prompt_tokens": "2283"
+     },
+     "unit": "tps",
+     "iters": 2283,
+     "median": 194.13,
+     "mean": 194.13,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 11760.156897132973
+     },
+     "status": "ok"
+    },
+    {
+     "name": "decode_qwen3-30b-a3b-4bit",
+     "variant": "l1",
+     "config": {
+      "model": "mlx-community/Qwen3-30B-A3B-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=0 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "dense"
+     },
+     "unit": "ms",
+     "iters": 768,
+     "median": 6.7549943923950195,
+     "mean": 6.869375440809462,
+     "p95": 6.955981254577637,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "tps_wall": 145.57364182764243,
+      "peak_GB": 17.922
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill43_qwen3-30b-a3b-4bit",
+     "variant": "l1",
+     "config": {
+      "prompt_tokens": "43"
+     },
+     "unit": "tps",
+     "iters": 43,
+     "median": 207.915,
+     "mean": 207.915,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 206.81521777769623
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill577_qwen3-30b-a3b-4bit",
+     "variant": "l1",
+     "config": {
+      "prompt_tokens": "577"
+     },
+     "unit": "tps",
+     "iters": 577,
+     "median": 575.637,
+     "mean": 575.637,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 1002.367841404674
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill2283_qwen3-30b-a3b-4bit",
+     "variant": "l1",
+     "config": {
+      "prompt_tokens": "2283"
+     },
+     "unit": "tps",
+     "iters": 2283,
+     "median": 3032.213,
+     "mean": 3032.213,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 752.9154517176137
+     },
+     "status": "ok"
+    },
+    {
+     "name": "decode_qwen3-4b-4bit",
+     "variant": "l1",
+     "config": {
+      "model": "mlx-community/Qwen3-4B-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=0 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "dense"
+     },
+     "unit": "ms",
+     "iters": 768,
+     "median": 5.527019500732422,
+     "mean": 6.592233975728353,
+     "p95": 13.332009315490723,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "tps_wall": 151.69364492854086,
+      "peak_GB": 3.229
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill43_qwen3-4b-4bit",
+     "variant": "l1",
+     "config": {
+      "prompt_tokens": "43"
+     },
+     "unit": "tps",
+     "iters": 43,
+     "median": 90.341,
+     "mean": 90.341,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 475.9745116021297
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill577_qwen3-4b-4bit",
+     "variant": "l1",
+     "config": {
+      "prompt_tokens": "577"
+     },
+     "unit": "tps",
+     "iters": 577,
+     "median": 234.182,
+     "mean": 234.182,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 2463.895600879834
+     },
+     "status": "ok"
+    },
+    {
+     "name": "prefill2283_qwen3-4b-4bit",
+     "variant": "l1",
+     "config": {
+      "prompt_tokens": "2283"
+     },
+     "unit": "tps",
+     "iters": 2283,
+     "median": 597.9,
+     "mean": 597.9,
+     "p95": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "prefill_tps": 3818.3648255385056
+     },
+     "status": "ok"
+    },
+    {
+     "name": "decode_qwen3-1.7b-4bit",
+     "variant": "l2",
+     "config": {
+      "model": "mlx-community/Qwen3-1.7B-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=0 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "dense",
+      "note": "FoundationModels session; short completions"
+     },
+     "unit": "ms",
+     "iters": 24,
+     "median": 54.658,
+     "mean": 52.915,
+     "p95": 54.658,
+     "min": 51.172,
+     "max": 54.658,
+     "derived": {
+      "tps_wall": 18.919
+     },
+     "status": "ok"
+    },
+    {
+     "name": "decode_qwen3-1.7b-4bit",
+     "variant": "l3",
+     "config": {
+      "model": "qwen3-1.7b-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=768 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "qwen3_dense"
+     },
+     "unit": "ms",
+     "iters": 768,
+     "median": 6.78,
+     "mean": 6.948,
+     "p95": 12.887,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "tps_wall": 143.93,
+      "peak_GB": 3.551
+     },
+     "status": "ok"
+    },
+    {
+     "name": "decode_qwen3-30b-a3b-4bit",
+     "variant": "l3",
+     "config": {
+      "model": "qwen3-30b-a3b-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=192 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "qwen3_moe"
+     },
+     "unit": "ms",
+     "iters": 192,
+     "median": 15.643,
+     "mean": 16.203,
+     "p95": 21.148,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "tps_wall": 61.72,
+      "peak_GB": 19.395
+     },
+     "status": "ok"
+    },
+    {
+     "name": "decode_qwen3-4b-4bit",
+     "variant": "l3",
+     "config": {
+      "model": "qwen3-4b-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=768 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "qwen3_dense"
+     },
+     "unit": "ms",
+     "iters": 768,
+     "median": 9.675,
+     "mean": 10.817,
+     "p95": 22.854,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "tps_wall": 92.45,
+      "peak_GB": 7.434
+     },
+     "status": "ok"
+    },
+    {
+     "name": "decode_qwen3-1.7b-4bit",
+     "variant": "l4",
+     "config": {
+      "model": "qwen3-1.7b-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=768 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "qwen3_dense"
+     },
+     "unit": "ms",
+     "iters": 768,
+     "median": 6.919,
+     "mean": 7.046,
+     "p95": 8.259,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "tps_wall": 141.92,
+      "peak_GB": 4.509
+     },
+     "status": "ok"
+    },
+    {
+     "name": "decode_qwen3-30b-a3b-4bit",
+     "variant": "l4",
+     "config": {
+      "model": "qwen3-30b-a3b-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=64 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "qwen3_moe"
+     },
+     "unit": "ms",
+     "iters": 64,
+     "median": 13.209,
+     "mean": 14.063,
+     "p95": 18.525,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "tps_wall": 71.11,
+      "peak_GB": 18.509
+     },
+     "status": "ok"
+    },
+    {
+     "name": "decode_qwen3-4b-4bit",
+     "variant": "l4",
+     "config": {
+      "model": "qwen3-4b-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=192 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "qwen3_dense"
+     },
+     "unit": "ms",
+     "iters": 192,
+     "median": 6.061,
+     "mean": 6.074,
+     "p95": 6.155,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "tps_wall": 164.64,
+      "peak_GB": 4.951
+     },
+     "status": "ok"
+    },
+    {
+     "name": "decode_qwen3-1.7b-4bit",
+     "variant": "l5",
+     "config": {
+      "model": "qwen3-1.7b-4bit",
+      "tokens_per_run": "see logs",
+      "runs": "decode_steps=192 (as-run; see logs/ + raw row)",
+      "build": "release",
+      "kind": "qwen3_dense"
+     },
+     "unit": "ms",
+     "iters": 192,
+     "median": 4.128,
+     "mean": 4.074,
+     "p95": 4.391,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "tps_wall": 245.48,
+      "peak_GB": 2.079
+     },
+     "status": "ok"
+    }
+   ],
+   "notes": [
+    "matrix collected via serialized GPU queues (night_queue{3,4,5,6}.sh; logs/ per-cell stdout). Process contention policy: one GPU job at a time after the 30B Insufficient-Memory cascade of the first night queue.",
+    "Session: openfox-e9e19426 night experiment 2026-10-27/28. bench-repo rev 3cadaaf (working tree adds lanes/, logs/, night_queue*.sh, tools/assemble_lane_matrix.py uncommitted).",
+    "Versions pinned: python lane .venv-mlx (uv) mlx 0.32.4 / mlx-lm 0.32.2; Swift mlx-swift 19601207e9a0de51e03ee6ec0c3c5f3784275075 (0.32.3) + mlx-swift-lm 3b339ad6e3b3f44c8121ecff5131c7fd55e075e6; C lane links Swift's own Cmlx.o (Release, same bytes as the L1 app's dylib) -> C==Swift core by construction; Rust via mlx-sys 0.6.0 vendored mlx-c -> core v0.32.2 (patch-level skew, logged).",
+    "Metallib provenance matters: the C host with the Python wheel's mlx.metallib ran lm_head dequant+matmul ~4x slower (0.935 vs 0.256 ms/op A/B probe lanes/c/gpu_probe2.c); fix was symlinking lanes/c/mlx.metallib -> the SPM default.metallib from the Swift build. All C/OBJC numbers below are on the SPM metallib.",
+    "Native lane numbers are step-count-sensitive: live Metal buffers grow ~2MB/step (dense) in hand-rolled loops until iogpu rsrc_limit 499000 is hit (~550 steps MoE). Cells with decode_steps<768 are short-salvage runs, faster per-step than their long-run average (crashed 768-step attempts recorded in FAILURES.md). mlx_clear_cache every 50 steps does NOT rescue.",
+    "L2 FoundationModels: FM session wraps the mlx model; completions are short (session policy) and include prompt overhead; t/s not comparable to raw-loop lanes \u2014 recorded separately per FM honesty rule."
+   ]
+  }
+ ],
+ "status": {
+  "s6_llm_lane_matrix": "done"
+ }
+}

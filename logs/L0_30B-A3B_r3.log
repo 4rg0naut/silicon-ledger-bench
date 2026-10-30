@@ -1,0 +1,20 @@
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 2610.97it/s]
+Traceback (most recent call last):
+  File "/Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/python/l0_full_loop.py", line 122, in <module>
+    main()
+  File "/Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/python/l0_full_loop.py", line 113, in main
+    row = bench_model(a.model, a.max_tokens, a.runs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/python/l0_full_loop.py", line 86, in bench_model
+    for g in stream_generate(model, tokenizer, prompt=pp, max_tokens=1):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/DEV/OpenFox/AI_dev/.venv-mlx/lib/python3.12/site-packages/mlx_lm/generate.py", line 734, in stream_generate
+    for n, (token, logprobs, from_draft) in enumerate(token_generator):
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/DEV/OpenFox/AI_dev/.venv-mlx/lib/python3.12/site-packages/mlx_lm/generate.py", line 722, in <genexpr>
+    (token, logprobs, False) for token, logprobs in token_generator
+                                                    ^^^^^^^^^^^^^^^
+  File "/Volumes/DEV/OpenFox/AI_dev/.venv-mlx/lib/python3.12/site-packages/mlx_lm/generate.py", line 466, in generate_step
+    mx.async_eval(y, logprobs)
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).
+L0 30B exit 1

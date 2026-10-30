@@ -1,0 +1,4 @@
+prefill 32 tok: 31.62 ms mean / 28.13 ms best (1011.9 tok/s)
+prefill 512 tok: 137.20 ms mean / 101.86 ms best (3731.8 tok/s)
+prefill 2048 tok: 5496.08 ms mean / 2708.09 ms best (372.6 tok/s)
+{"lane":"l4","build_mode":"release","model_kind":"qwen3_dense","hidden":2560,"layers":36,"decode_steps":128,"mean_step_ms":10.821,"p50_step_ms":6.191,"p95_step_ms":29.928,"mean_decode_tps_wall":92.42,"peak_memory_bytes":56517079104,"prefill":{"32":{"prompt_tokens":32,"mean_ms":31.624,"best_ms":28.131,"wall_tps":1011.90},"512":{"prompt_tokens":512,"mean_ms":137.197,"best_ms":101.862,"wall_tps":3731.85},"2048":{"prompt_tokens":2048,"mean_ms":5496.075,"best_ms":2708.089,"wall_tps":372.63}}}

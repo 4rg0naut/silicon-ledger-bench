@@ -1,0 +1,1 @@
+{"lane": "l0m", "build_mode": "release", "model_kind": "qwen3", "hidden": 2560, "layers": 36, "decode_steps": 768, "mean_step_ms": 9.402, "p50_step_ms": 7.071, "p95_step_ms": 22.179, "mean_decode_tps_wall": 106.36, "peak_memory_bytes": 3110391052}

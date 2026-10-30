@@ -1,0 +1,3368 @@
+g_embed nd=2 shape=[151936,2048] dtype=12
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.02 layers+94.24
+  head+94.40
+mem step=0 peak=1592MB active=1592MB cache=0MB last_step=104.86ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+mem step=0 peak=1594MB active=1594MB cache=0MB last_step=8.81ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.68
+  head+0.69
+mem step=0 peak=1596MB active=1596MB cache=0MB last_step=4.75ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+mem step=0 peak=1599MB active=1598MB cache=0MB last_step=4.10ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.64
+  head+0.65
+mem step=0 peak=1601MB active=1600MB cache=1MB last_step=3.73ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.65
+mem step=0 peak=1603MB active=1602MB cache=1MB last_step=3.86ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+mem step=0 peak=1605MB active=1604MB cache=1MB last_step=3.72ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+mem step=0 peak=1607MB active=1606MB cache=1MB last_step=3.68ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+mem step=0 peak=1610MB active=1609MB cache=1MB last_step=3.65ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.60
+mem step=0 peak=1612MB active=1611MB cache=2MB last_step=3.70ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+mem step=0 peak=1614MB active=1613MB cache=2MB last_step=3.75ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.60
+mem step=0 peak=1616MB active=1615MB cache=2MB last_step=3.76ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+mem step=0 peak=1618MB active=1617MB cache=2MB last_step=3.71ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+mem step=0 peak=1619MB active=1619MB cache=2MB last_step=3.65ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+mem step=0 peak=1621MB active=1621MB cache=2MB last_step=3.75ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.67
+mem step=0 peak=1623MB active=1623MB cache=2MB last_step=3.64ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+mem step=0 peak=1626MB active=1625MB cache=4MB last_step=3.59ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=0 peak=1628MB active=1627MB cache=4MB last_step=3.74ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+mem step=0 peak=1630MB active=1629MB cache=4MB last_step=3.71ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.51
+  head+0.52
+mem step=0 peak=1632MB active=1631MB cache=5MB last_step=3.51ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.52
+  head+0.53
+mem step=0 peak=1634MB active=1633MB cache=5MB last_step=3.44ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=0 peak=1636MB active=1635MB cache=5MB last_step=3.52ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+mem step=0 peak=1638MB active=1637MB cache=5MB last_step=3.45ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1640MB active=1638MB cache=5MB last_step=3.52ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1642MB active=1641MB cache=8MB last_step=3.60ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+mem step=0 peak=1644MB active=1643MB cache=9MB last_step=3.68ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.51
+  head+0.52
+mem step=0 peak=1646MB active=1645MB cache=9MB last_step=3.49ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+mem step=0 peak=1648MB active=1647MB cache=9MB last_step=3.60ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+mem step=0 peak=1650MB active=1649MB cache=9MB last_step=3.58ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+mem step=0 peak=1652MB active=1651MB cache=9MB last_step=3.55ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1654MB active=1652MB cache=9MB last_step=3.54ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+mem step=0 peak=1656MB active=1654MB cache=9MB last_step=3.48ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+mem step=0 peak=1658MB active=1657MB cache=13MB last_step=3.58ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1660MB active=1659MB cache=14MB last_step=3.58ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=0 peak=1662MB active=1661MB cache=14MB last_step=3.53ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=0 peak=1664MB active=1663MB cache=15MB last_step=3.41ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=0 peak=1666MB active=1665MB cache=15MB last_step=3.53ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=0 peak=1668MB active=1666MB cache=15MB last_step=3.56ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.49
+mem step=0 peak=1670MB active=1668MB cache=15MB last_step=3.41ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.49
+mem step=0 peak=1672MB active=1670MB cache=15MB last_step=3.42ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.49
+mem step=0 peak=1674MB active=1673MB cache=19MB last_step=3.49ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.48
+mem step=0 peak=1677MB active=1675MB cache=21MB last_step=3.49ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.61
+mem step=0 peak=1678MB active=1677MB cache=21MB last_step=3.61ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1681MB active=1678MB cache=22MB last_step=3.56ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.49
+mem step=0 peak=1682MB active=1680MB cache=22MB last_step=3.47ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+mem step=0 peak=1684MB active=1682MB cache=22MB last_step=3.46ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+mem step=0 peak=1686MB active=1684MB cache=22MB last_step=3.46ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1688MB active=1686MB cache=22MB last_step=3.58ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.49
+mem step=0 peak=1690MB active=1689MB cache=27MB last_step=3.54ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1693MB active=1691MB cache=29MB last_step=3.64ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1695MB active=1692MB cache=30MB last_step=3.60ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1697MB active=1694MB cache=30MB last_step=3.58ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+mem step=0 peak=1698MB active=1696MB cache=30MB last_step=3.47ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=0 peak=1701MB active=1698MB cache=30MB last_step=3.46ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+mem step=0 peak=1702MB active=1700MB cache=30MB last_step=3.47ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1704MB active=1702MB cache=30MB last_step=3.70ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.50
+mem step=0 peak=1706MB active=1705MB cache=36MB last_step=3.53ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=1709MB active=1706MB cache=39MB last_step=3.58ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1711MB active=1708MB cache=39MB last_step=3.64ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+mem step=0 peak=1713MB active=1710MB cache=39MB last_step=3.63ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1715MB active=1712MB cache=39MB last_step=3.56ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1717MB active=1714MB cache=39MB last_step=3.56ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.49
+mem step=0 peak=1718MB active=1716MB cache=39MB last_step=3.42ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.49
+mem step=0 peak=1721MB active=1718MB cache=39MB last_step=3.48ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.49
+mem step=0 peak=1722MB active=1720MB cache=47MB last_step=3.51ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.58
+mem step=0 peak=1725MB active=1722MB cache=50MB last_step=3.58ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=0 peak=1727MB active=1724MB cache=50MB last_step=3.58ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=0 peak=1729MB active=1726MB cache=50MB last_step=3.55ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+mem step=0 peak=1731MB active=1728MB cache=50MB last_step=3.48ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.61
+mem step=0 peak=1733MB active=1730MB cache=50MB last_step=3.57ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.50
+mem step=0 peak=1734MB active=1732MB cache=50MB last_step=3.47ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=1736MB active=1734MB cache=50MB last_step=3.51ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.54
+mem step=0 peak=1739MB active=1736MB cache=59MB last_step=3.57ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=1741MB active=1738MB cache=62MB last_step=3.58ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+mem step=0 peak=1743MB active=1740MB cache=62MB last_step=3.54ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1745MB active=1742MB cache=62MB last_step=3.64ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=1747MB active=1744MB cache=62MB last_step=3.53ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1748MB active=1746MB cache=62MB last_step=3.92ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1751MB active=1748MB cache=62MB last_step=3.61ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1753MB active=1749MB cache=62MB last_step=3.59ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1755MB active=1752MB cache=71MB last_step=3.65ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.49
+mem step=0 peak=1757MB active=1754MB cache=75MB last_step=3.57ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.52
+  head+0.53
+mem step=0 peak=1759MB active=1756MB cache=75MB last_step=3.56ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1761MB active=1758MB cache=75MB last_step=3.60ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1763MB active=1760MB cache=75MB last_step=3.61ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+mem step=0 peak=1764MB active=1762MB cache=75MB last_step=3.62ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1766MB active=1763MB cache=75MB last_step=3.89ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1767MB active=1765MB cache=75MB last_step=3.93ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+mem step=0 peak=1770MB active=1768MB cache=85MB last_step=4.25ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=0 peak=1772MB active=1770MB cache=88MB last_step=3.92ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1774MB active=1772MB cache=88MB last_step=3.90ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.54
+mem step=0 peak=1776MB active=1774MB cache=88MB last_step=3.80ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1778MB active=1776MB cache=88MB last_step=3.90ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.62
+mem step=0 peak=1779MB active=1777MB cache=88MB last_step=3.89ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1781MB active=1779MB cache=88MB last_step=3.87ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+mem step=0 peak=1783MB active=1781MB cache=88MB last_step=3.85ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1786MB active=1784MB cache=99MB last_step=4.23ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+mem step=0 peak=1788MB active=1786MB cache=102MB last_step=3.85ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.55
+mem step=0 peak=1790MB active=1788MB cache=102MB last_step=3.75ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1792MB active=1790MB cache=102MB last_step=3.74ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=0 peak=1794MB active=1791MB cache=102MB last_step=3.67ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=0 peak=1796MB active=1793MB cache=102MB last_step=3.81ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1797MB active=1795MB cache=102MB last_step=3.80ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.60
+mem step=0 peak=1799MB active=1797MB cache=102MB last_step=3.80ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+mem step=0 peak=1802MB active=1800MB cache=114MB last_step=3.97ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=0 peak=1804MB active=1802MB cache=117MB last_step=3.78ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1806MB active=1804MB cache=117MB last_step=3.85ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=0 peak=1808MB active=1805MB cache=117MB last_step=3.83ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1810MB active=1807MB cache=117MB last_step=3.84ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=1812MB active=1809MB cache=117MB last_step=3.81ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=0 peak=1813MB active=1811MB cache=117MB last_step=3.87ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=1815MB active=1813MB cache=117MB last_step=3.76ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=1818MB active=1816MB cache=130MB last_step=4.11ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1820MB active=1817MB cache=134MB last_step=4.02ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=0 peak=1822MB active=1819MB cache=134MB last_step=3.76ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1824MB active=1821MB cache=134MB last_step=3.85ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=1826MB active=1823MB cache=134MB last_step=3.83ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.51
+  head+0.51
+mem step=0 peak=1828MB active=1825MB cache=134MB last_step=3.75ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=1830MB active=1827MB cache=134MB last_step=3.95ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1832MB active=1829MB cache=134MB last_step=3.89ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=1834MB active=1831MB cache=147MB last_step=4.21ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.51
+  head+0.52
+mem step=0 peak=1836MB active=1833MB cache=151MB last_step=3.98ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.55
+mem step=0 peak=1838MB active=1835MB cache=151MB last_step=3.81ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1840MB active=1837MB cache=151MB last_step=3.90ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+mem step=0 peak=1842MB active=1839MB cache=151MB last_step=3.96ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=1843MB active=1841MB cache=151MB last_step=3.96ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=1846MB active=1843MB cache=151MB last_step=3.96ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=1847MB active=1845MB cache=151MB last_step=3.82ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=1850MB active=1847MB cache=166MB last_step=4.21ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.56
+mem step=0 peak=1852MB active=1849MB cache=169MB last_step=4.04ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+mem step=0 peak=1854MB active=1851MB cache=169MB last_step=3.95ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+mem step=0 peak=1856MB active=1853MB cache=169MB last_step=4.23ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+mem step=0 peak=1858MB active=1855MB cache=169MB last_step=4.13ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+mem step=0 peak=1860MB active=1857MB cache=169MB last_step=4.14ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1862MB active=1859MB cache=169MB last_step=3.86ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.60
+mem step=0 peak=1863MB active=1860MB cache=169MB last_step=3.86ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1866MB active=1863MB cache=185MB last_step=4.28ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1868MB active=1865MB cache=188MB last_step=4.10ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.52
+  head+0.53
+mem step=0 peak=1870MB active=1867MB cache=188MB last_step=3.67ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.49
+mem step=0 peak=1872MB active=1869MB cache=188MB last_step=3.62ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.60
+mem step=0 peak=1875MB active=1871MB cache=189MB last_step=3.85ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=1876MB active=1873MB cache=189MB last_step=3.70ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=1878MB active=1874MB cache=189MB last_step=3.78ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=0 peak=1880MB active=1876MB cache=189MB last_step=3.89ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1882MB active=1879MB cache=205MB last_step=4.12ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=1884MB active=1881MB cache=209MB last_step=3.82ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.49
+mem step=0 peak=1886MB active=1883MB cache=209MB last_step=4.04ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.49
+mem step=0 peak=1888MB active=1885MB cache=209MB last_step=3.78ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.60
+mem step=0 peak=1891MB active=1887MB cache=209MB last_step=3.93ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1892MB active=1888MB cache=209MB last_step=4.00ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=0 peak=1894MB active=1890MB cache=209MB last_step=3.83ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=0 peak=1896MB active=1892MB cache=209MB last_step=3.77ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.49
+mem step=0 peak=1898MB active=1895MB cache=227MB last_step=4.10ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1900MB active=1897MB cache=231MB last_step=4.25ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=1902MB active=1899MB cache=230MB last_step=4.00ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.51
+  head+0.52
+mem step=0 peak=1905MB active=1901MB cache=230MB last_step=3.88ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=1906MB active=1902MB cache=230MB last_step=3.98ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.58
+mem step=0 peak=1908MB active=1904MB cache=230MB last_step=4.06ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1910MB active=1906MB cache=229MB last_step=4.86ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+mem step=0 peak=1912MB active=1908MB cache=229MB last_step=3.95ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+mem step=0 peak=1915MB active=1911MB cache=247MB last_step=4.31ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1917MB active=1913MB cache=251MB last_step=4.24ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+mem step=0 peak=1919MB active=1915MB cache=251MB last_step=3.95ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+mem step=0 peak=1921MB active=1916MB cache=251MB last_step=3.85ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=0 peak=1923MB active=1918MB cache=251MB last_step=3.91ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=1924MB active=1920MB cache=250MB last_step=3.88ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1927MB active=1922MB cache=250MB last_step=3.87ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+mem step=0 peak=1928MB active=1924MB cache=250MB last_step=3.91ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1931MB active=1927MB cache=269MB last_step=4.10ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=1933MB active=1929MB cache=273MB last_step=3.94ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+mem step=0 peak=1935MB active=1930MB cache=273MB last_step=4.00ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1936MB active=1932MB cache=273MB last_step=4.00ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+mem step=0 peak=1938MB active=1934MB cache=272MB last_step=4.00ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.51
+  head+0.52
+mem step=0 peak=1940MB active=1936MB cache=272MB last_step=4.12ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1942MB active=1938MB cache=272MB last_step=4.07ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.49
+mem step=0 peak=1944MB active=1940MB cache=271MB last_step=3.93ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=0 peak=1946MB active=1943MB cache=291MB last_step=4.29ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.51
+  head+0.52
+mem step=0 peak=1949MB active=1944MB cache=296MB last_step=4.04ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+mem step=0 peak=1951MB active=1946MB cache=296MB last_step=4.06ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+mem step=0 peak=1953MB active=1948MB cache=296MB last_step=4.02ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.57
+mem step=0 peak=1954MB active=1950MB cache=295MB last_step=4.04ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=1957MB active=1952MB cache=295MB last_step=4.04ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=1958MB active=1954MB cache=295MB last_step=4.03ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.51
+  head+0.52
+mem step=0 peak=1960MB active=1956MB cache=294MB last_step=4.00ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=0 peak=1963MB active=1958MB cache=315MB last_step=4.21ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.50
+mem step=0 peak=1965MB active=1960MB cache=320MB last_step=4.03ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=0 peak=1967MB active=1962MB cache=320MB last_step=3.97ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=1969MB active=1964MB cache=320MB last_step=4.00ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.50
+mem step=0 peak=1971MB active=1966MB cache=319MB last_step=3.96ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=0 peak=1973MB active=1968MB cache=319MB last_step=3.96ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+mem step=0 peak=1975MB active=1970MB cache=319MB last_step=3.96ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.50
+mem step=0 peak=1976MB active=1971MB cache=319MB last_step=3.95ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=1979MB active=1974MB cache=340MB last_step=4.26ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1981MB active=1976MB cache=346MB last_step=4.18ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+mem step=0 peak=1983MB active=1978MB cache=345MB last_step=3.96ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.56
+mem step=0 peak=1984MB active=1980MB cache=345MB last_step=4.03ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=0 peak=1987MB active=1982MB cache=345MB last_step=4.00ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=1989MB active=1984MB cache=344MB last_step=4.10ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=0 peak=1991MB active=1985MB cache=344MB last_step=4.15ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=1992MB active=1987MB cache=344MB last_step=4.03ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=0 peak=1995MB active=1990MB cache=366MB last_step=4.22ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=1998MB active=1992MB cache=372MB last_step=4.12ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.49
+mem step=0 peak=1999MB active=1994MB cache=372MB last_step=3.94ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=2001MB active=1996MB cache=371MB last_step=4.03ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=2003MB active=1998MB cache=371MB last_step=4.00ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+mem step=0 peak=2004MB active=1999MB cache=371MB last_step=3.88ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.52
+  head+0.53
+mem step=0 peak=2007MB active=2001MB cache=371MB last_step=4.04ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.50
+mem step=0 peak=2008MB active=2003MB cache=370MB last_step=3.99ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.55
+mem step=0 peak=2011MB active=2006MB cache=394MB last_step=4.26ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=2013MB active=2008MB cache=400MB last_step=4.13ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=0 peak=2016MB active=2010MB cache=399MB last_step=4.00ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=2017MB active=2012MB cache=399MB last_step=4.06ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=0 peak=2020MB active=2013MB cache=399MB last_step=4.00ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=0 peak=2020MB active=2015MB cache=398MB last_step=3.96ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=0 peak=2023MB active=2017MB cache=398MB last_step=4.10ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=2024MB active=2019MB cache=398MB last_step=4.04ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=2027MB active=2022MB cache=422MB last_step=4.39ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=0 peak=2029MB active=2024MB cache=428MB last_step=4.05ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=2032MB active=2026MB cache=428MB last_step=4.09ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=2034MB active=2027MB cache=428MB last_step=4.13ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+mem step=0 peak=2035MB active=2029MB cache=427MB last_step=3.97ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=2037MB active=2031MB cache=427MB last_step=4.06ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.56
+mem step=0 peak=2039MB active=2033MB cache=427MB last_step=4.06ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=2041MB active=2035MB cache=426MB last_step=4.04ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=2043MB active=2038MB cache=452MB last_step=4.29ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+mem step=0 peak=2045MB active=2040MB cache=458MB last_step=4.14ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=2048MB active=2041MB cache=458MB last_step=4.12ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=2050MB active=2043MB cache=457MB last_step=4.07ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.51
+  head+0.52
+mem step=0 peak=2052MB active=2045MB cache=457MB last_step=4.05ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+mem step=0 peak=2053MB active=2047MB cache=457MB last_step=4.10ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=2055MB active=2049MB cache=456MB last_step=4.07ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=2057MB active=2051MB cache=456MB last_step=4.06ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+mem step=0 peak=2060MB active=2054MB cache=482MB last_step=4.38ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=2061MB active=2056MB cache=488MB last_step=4.22ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=2064MB active=2057MB cache=489MB last_step=4.00ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.58
+mem step=0 peak=2065MB active=2059MB cache=488MB last_step=4.12ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.68
+mem step=0 peak=2067MB active=2061MB cache=488MB last_step=4.34ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+mem step=0 peak=2069MB active=2063MB cache=488MB last_step=4.39ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.68
+mem step=0 peak=2071MB active=2065MB cache=487MB last_step=4.29ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.69
+mem step=0 peak=2072MB active=2067MB cache=487MB last_step=4.38ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+mem step=0 peak=2075MB active=2070MB cache=514MB last_step=4.56ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+mem step=0 peak=2077MB active=2072MB cache=520MB last_step=4.36ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+mem step=0 peak=2079MB active=2073MB cache=520MB last_step=4.32ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+mem step=0 peak=2081MB active=2075MB cache=520MB last_step=5.67ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=2084MB active=2077MB cache=520MB last_step=4.63ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.66
+  head+0.66
+mem step=0 peak=2087MB active=2079MB cache=521MB last_step=4.51ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=2090MB active=2081MB cache=521MB last_step=4.63ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.50
+mem step=0 peak=2091MB active=2083MB cache=521MB last_step=4.25ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=2093MB active=2086MB cache=549MB last_step=4.71ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=0 peak=2096MB active=2088MB cache=557MB last_step=4.52ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+mem step=0 peak=2100MB active=2089MB cache=559MB last_step=4.53ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.50
+mem step=0 peak=2100MB active=2091MB cache=559MB last_step=4.05ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=2103MB active=2093MB cache=558MB last_step=4.80ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=0 peak=2103MB active=2095MB cache=558MB last_step=4.15ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.56
+mem step=0 peak=2105MB active=2097MB cache=558MB last_step=4.60ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+mem step=0 peak=2106MB active=2099MB cache=557MB last_step=4.24ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.50
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.49
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.49
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.48
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+mem step=20 peak=2111MB active=2110MB cache=577MB last_step=5.81ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.58
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.52
+  head+0.53
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.82
+  head+0.86
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.75
+  head+0.77
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+mem step=40 peak=2150MB active=2150MB cache=571MB last_step=4.52ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.58
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.52
+  head+0.53
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.52
+  head+0.53
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.52
+  head+0.53
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.58
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.77
+  head+0.78
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+mem step=60 peak=2196MB active=2190MB cache=568MB last_step=13.76ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.52
+  head+0.53
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.91
+  head+0.92
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.83
+  head+0.85
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.79
+  head+0.80
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.52
+  head+0.53
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.74
+  head+0.75
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.02
+  head+1.03
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.77
+  head+0.78
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.45
+  head+0.46
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.90
+  head+0.91
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.21
+  head+1.23
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.58
+mem step=80 peak=2236MB active=2229MB cache=566MB last_step=12.42ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.21
+  head+1.23
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.19
+  head+1.20
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.77
+  head+0.78
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.75
+  head+0.77
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.16
+  head+1.18
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.77
+  head+0.79
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.75
+  head+0.76
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.79
+  head+0.80
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.74
+  head+0.75
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.72
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.49
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+mem step=100 peak=2277MB active=2269MB cache=563MB last_step=8.46ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+1.31
+  head+1.35
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.74
+  head+0.76
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.76
+  head+0.77
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.72
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.75
+  head+0.76
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+mem step=120 peak=2311MB active=2308MB cache=561MB last_step=4.11ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.71
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+1.26
+  head+1.30
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.58
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+1.37
+  head+1.41
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+mem step=140 peak=2362MB active=2348MB cache=569MB last_step=13.99ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+1.24
+  head+1.26
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.19
+  head+1.20
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.20
+  head+1.21
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.72
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+1.36
+  head+1.39
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+1.39
+  head+1.41
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+1.10
+  head+1.13
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.66
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.63
+  head+1.67
+mem step=160 peak=2398MB active=2388MB cache=597MB last_step=10.69ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.27
+  head+1.29
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.12
+  head+1.14
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.52
+  head+0.53
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.72
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.33
+  head+1.35
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.32
+  head+1.34
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+1.19
+  head+1.21
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.72
+  head+0.73
+mem step=180 peak=2444MB active=2428MB cache=588MB last_step=30.48ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+1.32
+  head+1.34
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.27
+  head+1.29
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.72
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.51
+  head+0.52
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.33
+  head+1.35
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+1.16
+  head+1.18
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.72
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.37
+  head+1.39
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.13
+  head+1.16
+mem step=200 peak=2477MB active=2467MB cache=580MB last_step=8.62ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.73
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+1.24
+  head+1.26
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.18
+  head+1.19
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.12
+  head+1.13
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.75
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.80
+  head+0.81
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.86
+  head+0.91
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.96
+  head+0.97
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+mem step=220 peak=2521MB active=2507MB cache=571MB last_step=7.02ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.80
+  head+0.82
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.99
+  head+1.00
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.71
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.89
+  head+0.91
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.30
+  head+1.31
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.80
+  head+0.80
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+mem step=240 peak=2563MB active=2546MB cache=563MB last_step=8.83ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.28
+  head+1.30
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.19
+  head+1.21
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.49
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.22
+  head+1.25
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.75
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.15
+  head+1.17
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.89
+  head+0.91
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.71
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+1.19
+  head+1.20
+mem step=260 peak=2592MB active=2557MB cache=594MB last_step=8.34ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.83
+  head+0.84
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.52
+  head+0.53
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.20
+  head+1.22
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.71
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.84
+  head+0.85
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.01
+  head+1.02
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.68
+  head+0.70
+mem step=280 peak=2599MB active=2597MB cache=592MB last_step=7.31ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.72
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.77
+  head+0.79
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.79
+  head+0.79
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.83
+  head+0.88
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.76
+  head+0.77
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.79
+  head+0.80
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.52
+  head+0.53
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.14
+  head+1.18
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.87
+  head+0.88
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.97
+  head+0.99
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.69
+mem step=300 peak=2640MB active=2637MB cache=589MB last_step=7.82ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.85
+  head+0.86
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.00
+  head+1.02
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.72
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.91
+  head+0.92
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.00
+  head+1.01
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+mem step=320 peak=2680MB active=2676MB cache=587MB last_step=7.48ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+1.20
+  head+1.22
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.07
+  head+1.09
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.19
+  head+1.22
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.75
+  head+0.77
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.74
+  head+0.76
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.78
+  head+0.79
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.58
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.80
+  head+0.81
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+mem step=340 peak=2718MB active=2716MB cache=585MB last_step=5.06ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.09
+  head+1.11
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.99
+  head+1.01
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.74
+  head+0.76
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.92
+  head+0.93
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.56
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.70
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.81
+  head+0.82
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+mem step=360 peak=2761MB active=2756MB cache=583MB last_step=6.42ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.84
+  head+0.85
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.76
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.83
+  head+0.84
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.54
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.86
+  head+0.88
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.80
+  head+0.81
+mem step=380 peak=2802MB active=2796MB cache=580MB last_step=6.39ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.68
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.51
+  head+0.52
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.54
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.65
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.90
+  head+0.92
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.80
+  head+0.81
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.68
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.89
+  head+0.90
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+mem step=400 peak=2840MB active=2835MB cache=578MB last_step=4.54ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.72
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.82
+  head+0.84
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.58
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.71
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.77
+  head+0.79
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.71
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.74
+  head+0.75
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.71
+mem step=420 peak=2885MB active=2875MB cache=606MB last_step=7.67ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.75
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.58
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.93
+  head+0.94
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.77
+  head+0.78
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.84
+  head+0.85
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.81
+  head+0.82
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.53
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.59
+mem step=440 peak=2924MB active=2914MB cache=598MB last_step=6.78ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.78
+  head+0.80
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.78
+  head+0.80
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.71
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.47
+  head+0.47
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+mem step=460 peak=2966MB active=2954MB cache=589MB last_step=6.82ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.60
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.49
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.72
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.74
+  head+2.91
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.49
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.71
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.89
+  head+0.90
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.71
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.71
+mem step=480 peak=3011MB active=2994MB cache=581MB last_step=20.32ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.57
+  head+0.58
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.99
+  head+1.03
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+1.25
+  head+1.27
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.08
+  head+1.11
+mem step=500 peak=3050MB active=3034MB cache=572MB last_step=7.98ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.02
+  head+1.04
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.71
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.75
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.75
+  head+0.77
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.71
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.76
+  head+0.78
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.80
+  head+0.81
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.74
+  head+0.78
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.71
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.76
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.60
+  head+0.61
+mem step=520 peak=3074MB active=3044MB cache=595MB last_step=6.34ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.58
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.71
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.72
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.58
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.87
+  head+0.88
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.88
+  head+0.90
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.89
+  head+0.90
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.72
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+mem step=540 peak=3085MB active=3084MB cache=591MB last_step=6.24ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.63
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.53
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.72
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.56
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.77
+  head+0.79
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.49
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+mem step=560 peak=3126MB active=3123MB cache=589MB last_step=6.47ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.75
+  head+0.76
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.75
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.88
+  head+0.90
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.82
+  head+0.83
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.75
+  head+0.78
+mem step=580 peak=3167MB active=3164MB cache=587MB last_step=7.16ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.75
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.78
+  head+0.79
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.71
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.51
+mem step=600 peak=3206MB active=3203MB cache=585MB last_step=5.75ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.49
+  head+0.50
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.75
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.75
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.72
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.74
+  head+0.76
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.72
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.75
+  head+0.77
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.81
+  head+0.82
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.68
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.77
+  head+0.78
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+mem step=620 peak=3246MB active=3243MB cache=582MB last_step=4.82ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.69
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.75
+  head+0.77
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.57
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.73
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.07 layers+0.73
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.76
+  head+0.78
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.74
+mem step=640 peak=3289MB active=3282MB cache=580MB last_step=6.86ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.75
+  head+0.77
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.73
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.99
+  head+1.00
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.13
+  head+1.14
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.17
+  head+1.19
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.74
+  head+0.75
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.74
+  head+0.76
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.95
+  head+0.97
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.79
+  head+0.80
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.79
+  head+0.80
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.75
+  head+0.77
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.75
+  head+0.76
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.75
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.71
+  head+0.73
+mem step=660 peak=3329MB active=3322MB cache=602MB last_step=7.45ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.75
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.76
+  head+0.77
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.68
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.75
+  head+0.79
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.60
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.58
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.58
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.69
+mem step=680 peak=3365MB active=3361MB cache=603MB last_step=5.11ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.70
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.70
+  head+0.72
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.52
+  head+0.53
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.71
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.74
+  head+0.78
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.79
+  head+0.81
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.72
+  head+0.74
+mem step=700 peak=3411MB active=3401MB cache=594MB last_step=5.99ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.73
+  head+0.74
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+1.34
+  head+1.38
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.99
+  head+1.01
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.61
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.66
+  head+0.67
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+mem step=720 peak=3445MB active=3441MB cache=586MB last_step=5.03ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.54
+  head+0.55
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.69
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.84
+  head+0.88
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.01 layers+0.77
+  head+0.79
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.67
+  head+0.68
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.63
+  head+0.64
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.58
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.51
+  head+0.52
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.61
+  head+0.62
+mem step=740 peak=3486MB active=3481MB cache=577MB last_step=4.92ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.69
+  head+0.70
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.62
+  head+0.63
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.55
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.58
+  head+0.59
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.58
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.64
+  head+0.65
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.65
+  head+0.66
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.47
+  head+0.48
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.57
+  head+0.58
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.59
+  head+0.60
+mem step=760 peak=3525MB active=3520MB cache=569MB last_step=4.86ms
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.48
+  head+0.48
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.51
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.47
+  head+0.48
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.50
+  head+0.50
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.57
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.56
+  head+0.56
+tok nd=1 s0=1 | embed nd=2 s0=151936,s1=2048 | h nd=2 s0=1,s1=2048
+  take+0.00 layers+0.53
+  head+0.54
+{"lane":"l3","build_mode":"release","model_kind":"qwen3_dense","hidden":2048,"layers":28,"n_heads":16,"n_kv":8,"head_dim":128,"vocab":151936,"experts":0,"top_k":0,"decode_steps":768,"mean_step_ms":7.074,"p50_step_ms":6.662,"p95_step_ms":13.310,"mean_decode_tps_wall":141.36,"peak_memory_bytes":3545215100,"weights":"original snapshot safetensors via mlx_load_safetensors","ops":["mlx_quantized_matmul","mlx_gather_qmm","mlx_fast_rms_norm","mlx_fast_rope","mlx_fast_scaled_dot_product_attention","mlx_argsort_axis","mlx_concatenate_axis","mlx_argmax_axis","mlx_eval"]}

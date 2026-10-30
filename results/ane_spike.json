@@ -1,0 +1,17 @@
+{
+  "go" : true,
+  "os" : "macOS 27.0",
+  "timestamp" : "2026-10-07T16:44:50Z",
+  "compileLoadMs" : 50.675916666666666,
+  "notes" : [
+    "framework dlopen + class resolution OK",
+    "[fp16 512x64 d1] blob 524416 B, MIL 1482 chars",
+    "[fp16 512x64 d1] compile+load OK in 50.7 ms",
+    "[fp16 512x64 d1] max_abs_err=3.596e-05 (tol 1.000e-04), max_rel_err=0.0300",
+    "[fp16 512x64 d1] eval median 0.098 ms",
+    "[int8 256x64 d2] blob 133056 B, MIL 3373 chars",
+    "[int8 256x64 d2] compile+load OK in 18.1 ms",
+    "[int8 256x64 d2] max_abs_err=2.976e-05 (tol 1.646e-04), max_rel_err=0.0159",
+    "[int8 256x64 d2] eval median 0.093 ms"
+  ]
+}

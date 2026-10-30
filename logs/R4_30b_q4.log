@@ -1,0 +1,1 @@
+MLX error: [metal::malloc] Resource limit (499000) exceeded. at /Users/chris/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/mlx-sys-0.6.0/src/mlx-c/mlx/c/transforms.cpp:73

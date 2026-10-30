@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/python/l0m_microbench.py", line 207, in <module>
+    main()
+  File "/Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/python/l0m_microbench.py", line 184, in main
+    tok = decode_step(ctx, ws, cfg, tok, t)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/python/l0m_microbench.py", line 141, in decode_step
+    g = qmm_idx(ctx, ws, xb, f"{p}.mlp.switch_mlp.gate_proj", idx, cfg)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/python/l0m_microbench.py", line 95, in qmm_idx
+    return mx.gather_qmm(
+           ^^^^^^^^^^^^^^
+ValueError: [broadcast_shapes] Shapes (8) and (128) cannot be broadcast.

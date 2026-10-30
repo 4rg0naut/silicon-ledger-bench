@@ -1,0 +1,1 @@
+MLX error: [metal::malloc] Resource limit (499000) exceeded. at /Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/swift/.build/checkouts/mlx-swift/Source/Cmlx/mlx-c/mlx/c/transforms.cpp:73

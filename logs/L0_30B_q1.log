@@ -1,0 +1,19 @@
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 5006.13it/s]
+Traceback (most recent call last):
+  File "/Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/python/l0_full_loop.py", line 122, in <module>
+    main()
+  File "/Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/python/l0_full_loop.py", line 113, in main
+    row = bench_model(a.model, a.max_tokens, a.runs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/DEV/OpenFox/AI_dev/silicon-ledger-bench/lanes/python/l0_full_loop.py", line 54, in bench_model
+    for g in gen:
+             ^^^
+  File "/Volumes/DEV/OpenFox/AI_dev/.venv-mlx/lib/python3.12/site-packages/mlx_lm/generate.py", line 734, in stream_generate
+    for n, (token, logprobs, from_draft) in enumerate(token_generator):
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/DEV/OpenFox/AI_dev/.venv-mlx/lib/python3.12/site-packages/mlx_lm/generate.py", line 722, in <genexpr>
+    (token, logprobs, False) for token, logprobs in token_generator
+                                                    ^^^^^^^^^^^^^^^
+  File "/Volumes/DEV/OpenFox/AI_dev/.venv-mlx/lib/python3.12/site-packages/mlx_lm/generate.py", line 450, in generate_step
+    mx.eval([c.state for c in prompt_cache])
+RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory).

@@ -1,0 +1,375 @@
+{
+ "schema": "silicon-ledger/1",
+ "generated": "2026-10-22T12-37-03Z",
+ "machine": {
+  "ane": {
+   "ane_compiler_xpc": true,
+   "aned_daemon": true,
+   "coreai_framework": true,
+   "coreml_mlmodel": true,
+   "framework_loadable": true,
+   "inmemory_classes": true,
+   "request_class": true
+  },
+  "chip": "Apple M5 Max",
+  "cpuCores": {
+   "perflevel0": 6,
+   "perflevel1": 12,
+   "total": 18
+  },
+  "fingerprint": "bda452aabd60bf26",
+  "gpuCores": 40,
+  "gpuName": "Apple M5 Max",
+  "host": "studio.local",
+  "memoryGB": 128,
+  "metalFamilies": [
+   "apple1",
+   "apple2",
+   "apple3",
+   "apple4",
+   "apple5",
+   "apple6",
+   "apple7",
+   "apple8",
+   "apple9",
+   "apple10"
+  ],
+  "metalTensor": {
+   "bf16": true,
+   "fp16": true,
+   "fp32": true,
+   "fp4e2m1": true,
+   "fp8e4m3": true,
+   "fp8e5m2": true,
+   "int4": true,
+   "int8": true
+  },
+  "model": "Mac Studio",
+  "osBuild": "26A434",
+  "osVersion": "27.0.1",
+  "tools": {
+   "aimodelc": "present",
+   "coreai-torch": "0.4.3",
+   "coremlc": "present",
+   "python": "Python 3.11.16",
+   "swift_clt": "Target: arm64-apple-macosx27.0.0",
+   "swift_xcode": "Target: arm64-apple-macosx27.0.0"
+  }
+ },
+ "sections": [
+  {
+   "id": "nax_probe_matrix",
+   "title": "nax_ladder extended retest 2026-10-22 (poison + NCM geometry arms, 27.0.1 GM toolchain)",
+   "runs": [
+    {
+     "name": "nax_ladder_arm",
+     "variant": "half-K64-grid",
+     "config": {
+      "M": 64,
+      "N": 32,
+      "K": 64,
+      "grid": "1x1"
+     },
+     "unit": "elems",
+     "iters": 2048,
+     "median": 0,
+     "mean": 0,
+     "min": 1056,
+     "max": 992,
+     "derived": {
+      "exact": 0,
+      "unwritten": 992,
+      "written_zero": 0,
+      "nan": 1056,
+      "bad": 0,
+      "verdict": "NO-GO",
+      "classification": "never-written"
+     }
+    },
+    {
+     "name": "nax_ladder_arm",
+     "variant": "half-K64-grid",
+     "config": {
+      "M": 128,
+      "N": 32,
+      "K": 64,
+      "grid": "1x2"
+     },
+     "unit": "elems",
+     "iters": 4096,
+     "median": 0,
+     "mean": 0,
+     "min": 2112,
+     "max": 1984,
+     "derived": {
+      "exact": 0,
+      "unwritten": 1984,
+      "written_zero": 0,
+      "nan": 2112,
+      "bad": 0,
+      "verdict": "NO-GO",
+      "classification": "never-written"
+     }
+    },
+    {
+     "name": "nax_ladder_arm",
+     "variant": "half-K64-grid",
+     "config": {
+      "M": 128,
+      "N": 64,
+      "K": 64,
+      "grid": "2x2"
+     },
+     "unit": "elems",
+     "iters": 8192,
+     "median": 0,
+     "mean": 0,
+     "min": 4160,
+     "max": 4032,
+     "derived": {
+      "exact": 0,
+      "unwritten": 4032,
+      "written_zero": 0,
+      "nan": 4160,
+      "bad": 0,
+      "verdict": "NO-GO",
+      "classification": "never-written"
+     }
+    },
+    {
+     "name": "nax_ladder_arm",
+     "variant": "half-K64-grid",
+     "config": {
+      "M": 256,
+      "N": 64,
+      "K": 64,
+      "grid": "2x4"
+     },
+     "unit": "elems",
+     "iters": 16384,
+     "median": 0,
+     "mean": 0,
+     "min": 8320,
+     "max": 8064,
+     "derived": {
+      "exact": 0,
+      "unwritten": 8064,
+      "written_zero": 0,
+      "nan": 8320,
+      "bad": 0,
+      "verdict": "NO-GO",
+      "classification": "never-written"
+     }
+    },
+    {
+     "name": "nax_ladder_arm",
+     "variant": "half-K64-grid",
+     "config": {
+      "M": 256,
+      "N": 128,
+      "K": 64,
+      "grid": "4x4"
+     },
+     "unit": "elems",
+     "iters": 32768,
+     "median": 0,
+     "mean": 0,
+     "min": 16512,
+     "max": 16256,
+     "derived": {
+      "exact": 0,
+      "unwritten": 16256,
+      "written_zero": 0,
+      "nan": 16512,
+      "bad": 0,
+      "verdict": "NO-GO",
+      "classification": "never-written"
+     }
+    },
+    {
+     "name": "nax_ladder_arm",
+     "variant": "half-K64",
+     "config": {
+      "M": 64,
+      "N": 32,
+      "K": 64,
+      "grid": "1x1"
+     },
+     "unit": "elems",
+     "iters": 2048,
+     "median": 0,
+     "mean": 0,
+     "min": 1056,
+     "max": 992,
+     "derived": {
+      "exact": 0,
+      "unwritten": 992,
+      "written_zero": 0,
+      "nan": 1056,
+      "bad": 0,
+      "verdict": "NO-GO",
+      "classification": "never-written"
+     }
+    },
+    {
+     "name": "nax_ladder_arm",
+     "variant": "half-K256",
+     "config": {
+      "M": 64,
+      "N": 32,
+      "K": 256,
+      "grid": "1x1"
+     },
+     "unit": "elems",
+     "iters": 2048,
+     "median": 0,
+     "mean": 0,
+     "min": 1056,
+     "max": 992,
+     "derived": {
+      "exact": 0,
+      "unwritten": 992,
+      "written_zero": 0,
+      "nan": 1056,
+      "bad": 0,
+      "verdict": "NO-GO",
+      "classification": "never-written"
+     }
+    },
+    {
+     "name": "nax_ladder_arm",
+     "variant": "half-K256-loop",
+     "config": {
+      "M": 64,
+      "N": 32,
+      "K": 256,
+      "grid": "1x1"
+     },
+     "unit": "elems",
+     "iters": 2048,
+     "median": 0,
+     "mean": 0,
+     "min": 1056,
+     "max": 992,
+     "derived": {
+      "exact": 0,
+      "unwritten": 992,
+      "written_zero": 0,
+      "nan": 1056,
+      "bad": 0,
+      "verdict": "NO-GO",
+      "classification": "never-written"
+     }
+    },
+    {
+     "name": "nax_ladder_arm",
+     "variant": "fp32-relaxed0",
+     "config": {
+      "M": 64,
+      "N": 32,
+      "K": 64,
+      "grid": "1x1"
+     },
+     "unit": "elems",
+     "iters": 2048,
+     "median": 976,
+     "mean": 976,
+     "min": 0,
+     "max": 992,
+     "derived": {
+      "exact": 80,
+      "unwritten": 992,
+      "written_zero": 0,
+      "nan": 0,
+      "bad": 976,
+      "verdict": "NO-GO",
+      "classification": "never-written"
+     }
+    },
+    {
+     "name": "nax_ladder_arm",
+     "variant": "fp32-tf32",
+     "config": {
+      "M": 64,
+      "N": 32,
+      "K": 64,
+      "grid": "1x1"
+     },
+     "unit": "elems",
+     "iters": 2048,
+     "median": 976,
+     "mean": 976,
+     "min": 0,
+     "max": 992,
+     "derived": {
+      "exact": 80,
+      "unwritten": 992,
+      "written_zero": 0,
+      "nan": 0,
+      "bad": 976,
+      "verdict": "NO-GO",
+      "classification": "never-written"
+     }
+    },
+    {
+     "name": "nax_ladder_arm",
+     "variant": "half-devdest",
+     "config": {
+      "M": 64,
+      "N": 32,
+      "K": 64,
+      "grid": "1x1"
+     },
+     "unit": "elems",
+     "iters": 2048,
+     "median": 0,
+     "mean": 0,
+     "min": 2048,
+     "max": 0,
+     "derived": {
+      "exact": 0,
+      "unwritten": 0,
+      "written_zero": 0,
+      "nan": 2048,
+      "bad": 0,
+      "verdict": "NO-GO",
+      "classification": "garbage-nan"
+     }
+    },
+    {
+     "name": "nax_ladder_arm",
+     "variant": "strides-third-arg",
+     "config": {
+      "stage": "compile"
+     },
+     "unit": "elems",
+     "iters": 0,
+     "median": 0,
+     "mean": 0,
+     "min": 0,
+     "max": 0,
+     "derived": {
+      "verdict": "COMPILE-REJECTED",
+      "note": "ARM k_str            compile-rejected: program_source:17:8: error: no matching constructor for initialization of 'dh' (aka 'tensor<device half, extents<int, 184"
+     }
+    }
+   ],
+   "notes": [
+    "PRISTINE Oct-10 probe re-run today fails identically (1x1: 1056 nan + 992 unwritten vs zeroed-prefill run 1056 bad-nan + 992 kept-zero): the classic buffer+MTL3-dispatch form is broken at single tile on macOS 27.0.1/26A434. OS timeline is web-sourced: 27.0.1 (26A434) shipped 2026-09-28 with unspecified fixes (no release-notes page), so the Oct-10 run was already on this build - its header-only 'single-tile PASS' note is the suspect, not an OS change since Oct-10.",
+    "TRIVIAL non-MPP control writes every cell finite (no unwritten, no NaN): the fault is inside MPP matmul2d lowering/dispatch for the buffer-backed form, not the harness.",
+    "half-devdest arm: all-NaN device-destination - confirms Oct-10 note.",
+    "fp32 out-of-table + tf32 on this path: partial miscompute (976/2048 bad), NOT the clean written-zero of the MTL4 tensor-object path - mechanism is form-dependent.",
+    "strides third-arg misuse: now compile-rejected (API hardened; the silent-misread mine in older notes is fixed at compile time).",
+    "MTL4 tensor-object path (our trainer, results 2026-10-22T11-31-39Z nax_probe_matrix) UNAFFECTED: fp16 single-tile ok 4.7e-07 today.",
+    "build: clang++ -fobjc-arc -O2 -x objective-c++ -std=c++17 (raw-string MSL needs c++; linker needs libc++).",
+    "language-version control: same result WITHOUT the .version4_0 pin (default) - the pin is not the variable; today's GM toolchain is.",
+    "M5 context (web): on M5 the tensor path targets the new Neural Accelerators (WWDC26 #330) - different lowering than M4's simdgroup_matrix path (Rigel arXiv:2606.12765), whose documented law 'tensor_inline slice() does not offset reads; only (0,0) tile correct' matches our multi-tile/multi-K family. MLX #4533 on M5 Max: SDK tightened get_destination_cooperative_tensor type traits + TF32 tolerance failures forced MLX_ENABLE_TF32=0 - independent corroboration that fp32/tf32 rows are unreliable on this generation."
+   ]
+  }
+ ],
+ "status": {
+  "gpu": "M5 Max",
+  "probe": "nax_ladder",
+  "os": "27.0.1 (26A434)"
+ }
+}

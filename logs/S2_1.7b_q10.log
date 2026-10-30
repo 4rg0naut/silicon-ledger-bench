@@ -1,0 +1,41 @@
+l2 run=0 wall=0.8785309791564941 chars=149 retries=0 content=The weather today is variable, with mixe
+l2 run=1 wall=0.3552420139312744 chars=57 retries=1 content=The weather is partly cloudy with a chan
+l2 run=2 wall=0.3822129964828491 chars=57 retries=0 content=The weather is partly cloudy with a chan
+l2 run=3 wall=0.7019730806350708 chars=57 retries=0 content=The weather is partly cloudy with a chan
+{
+  "build_mode" : "release",
+  "decode" : {
+    "note" : "non-streaming respond(); tokens via re-tokenizing output; session prompt overhead included",
+    "runs" : [
+      {
+        "chars" : 57,
+        "retries" : 1,
+        "tokens_retokenized" : 12,
+        "wall_s" : 0.35524201393127441,
+        "wall_tps" : 33.779788227193016
+      },
+      {
+        "chars" : 57,
+        "retries" : 0,
+        "tokens_retokenized" : 12,
+        "wall_s" : 0.38221299648284912,
+        "wall_tps" : 31.396106648452157
+      },
+      {
+        "chars" : 57,
+        "retries" : 0,
+        "tokens_retokenized" : 12,
+        "wall_s" : 0.7019730806350708,
+        "wall_tps" : 17.094672617849778
+      }
+    ]
+  },
+  "l2_temperature" : 0,
+  "lane" : "l2",
+  "max_tokens" : 256,
+  "model" : "mlx-community\/Qwen3-1.7B-4bit",
+  "peak_memory_bytes" : 2251534376,
+  "peak_memory_GB" : 2.2515343759999999,
+  "version" : "swift-mlm 3.32.3 \/ mlx-swift 0.32.3",
+  "wired_bytes" : 0
+}

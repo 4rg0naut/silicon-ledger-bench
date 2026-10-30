@@ -1,0 +1,50 @@
+{
+  "build_mode" : "release",
+  "decode" : {
+    "mean_decode_tps_wall" : 145.57364182764243,
+    "mean_step_ms" : 6.8693754408094616,
+    "p50_step_ms" : 6.7549943923950195,
+    "p95_step_ms" : 6.9559812545776367,
+    "runs" : [
+      {
+        "internal_tps" : 147.27087928650349,
+        "tokens" : 153,
+        "wall_tps" : 142.36425349605514
+      },
+      {
+        "internal_tps" : 148.04006431624771,
+        "tokens" : 153,
+        "wall_tps" : 143.12240358233933
+      },
+      {
+        "internal_tps" : 147.19904431533465,
+        "tokens" : 153,
+        "wall_tps" : 142.33075203500422
+      }
+    ]
+  },
+  "lane" : "l1",
+  "max_tokens" : 256,
+  "model" : "mlx-community\/Qwen3-30B-A3B-4bit",
+  "peak_memory_bytes" : 17922483296,
+  "peak_memory_GB" : 17.922483295999999,
+  "prefill" : {
+    "32" : {
+      "prompt_tokens" : 43,
+      "ttfb_s" : 0.20791506767272949,
+      "ttfb_tps" : 206.81521777769623
+    },
+    "512" : {
+      "prompt_tokens" : 577,
+      "ttfb_s" : 0.57563698291778564,
+      "ttfb_tps" : 1002.367841404674
+    },
+    "2048" : {
+      "prompt_tokens" : 2283,
+      "ttfb_s" : 3.0322129726409912,
+      "ttfb_tps" : 752.91545171761368
+    }
+  },
+  "version" : "swift-mlm 3.32.3 \/ mlx-swift 0.32.3",
+  "wired_bytes" : 0
+}

@@ -1,0 +1,37 @@
+{
+  "build_mode" : "release",
+  "decode" : {
+    "note" : "non-streaming respond(); tokens via re-tokenizing output; session prompt overhead included",
+    "runs" : [
+      {
+        "chars" : 123,
+        "retries" : 0,
+        "tokens_retokenized" : 26,
+        "wall_s" : 0.88304901123046875,
+        "wall_tps" : 29.443439344064004
+      },
+      {
+        "chars" : 123,
+        "retries" : 0,
+        "tokens_retokenized" : 26,
+        "wall_s" : 0.97801196575164795,
+        "wall_tps" : 26.584541815925313
+      },
+      {
+        "chars" : 123,
+        "retries" : 0,
+        "tokens_retokenized" : 26,
+        "wall_s" : 1.1411499977111816,
+        "wall_tps" : 22.784033695963295
+      }
+    ]
+  },
+  "l2_temperature" : 0,
+  "lane" : "l2",
+  "max_tokens" : 256,
+  "model" : "mlx-community\/Qwen3-4B-4bit",
+  "peak_memory_bytes" : 4979351004,
+  "peak_memory_GB" : 4.9793510039999997,
+  "version" : "swift-mlm 3.32.3 \/ mlx-swift 0.32.3",
+  "wired_bytes" : 0
+}
