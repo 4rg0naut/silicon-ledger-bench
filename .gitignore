@@ -1,7 +1,13 @@
 .build/
 .swiftpm/
 results/*
+# re-include chain (ORDER LOAD-BEARING — git never descends into an excluded
+# directory, so !results/raw/ must come before !results/*.json is ever
+# consulted; do not reorder or "tidy"):
 !results/.gitkeep
+# ledgers are the product — never ignore a results/*.json row:
+!results/*.json
+!results/raw/
 models/*
 !models/.gitkeep
 tools/.venv/
@@ -11,9 +17,9 @@ tools/pip_install.log
 *.air
 *.metallib
 lanes/rust/target/
+# binaries are not provenance, but the .c sources are — the !*.c line
+# rescues them from the gpu_probe* exclude (order again load-bearing):
 lanes/c/qwen3_decode
 lanes/c/qwen3_decode_*
 lanes/c/gpu_probe*
 !lanes/c/*.c
-!results/*.json
-!results/raw/

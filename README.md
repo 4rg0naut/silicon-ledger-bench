@@ -339,6 +339,45 @@ Metal 4 / SDK notes discovered during this build (Xcode 27, macOS 27 SDK):
   *declared* (`evidence_unlocatable`), never asserted. The openclaims-ai/openclaims
   claim standard (v0.1) is the conformance target for the v0.1.x claims tool.
 
+## LLM host-language lanes (C3 / R4 / L0–L5)
+
+Beyond the burst probes above, the **`lanes/`** subtree runs the same
+Qwen3 decode loop (1.7B / 4B / 30B-A3B, greedy, serialized GPU queue) in six
+host-language lanes and publishes a cross-language cost table — the claims
+this repo's product statement is measured on:
+
+| lane | host | source |
+|---|---|---|
+| L0 / L0m | python (mlx_lm full loop / microbench mirror of the C graph) | `lanes/python/` |
+| L1 | swift (mlx-swift-lm full loop) | `lanes/swift/` |
+| L2 | swift (FoundationModels session) | `lanes/swift/` |
+| L3 | C (mlx-c hand-rolled decode loop) | `lanes/c/qwen3_decode.c` |
+| L4 | Rust (binds+links the same `mlx.h`/`Cmlx.o` as L1/L3) | `lanes/rust/` |
+| L5 | ObjC rehost of L3 (same source, `-x objective-c`) | `lanes/c/` |
+
+Reproduce (as the nightly queues ran them — see `QUEUES.md` for the exact
+qN-script/log/row mapping and the label traps):
+
+```sh
+# L1/L2 — swift lane binary (night_queue9.sh style)
+cd lanes/swift && swift build -c release
+./.build/release/msl --lane l1 --model mlx-community/Qwen3-1.7B-4bit \
+    --max-tokens 256 --runs 3     # --lane l2 uses FoundationModels
+# L3 — C lane (binary was compiled ad hoc against the mlx C SDK + metallib;
+# see FAILURES.md LF entries for the arena/leak patch history)
+cd ../c && ./qwen3_decode --params params_1.7b.txt --tokens 256 --runs 3
+# L4 — Rust lane (bindgen against the same mlx.h)
+cd ../rust && cargo build --release
+./target/release/qwen3_decode --params ../c/params_1.7b.txt --tokens 256 --runs 3
+# assemble rows into the silicon-ledger/1 matrix record
+python3 ../../tools/assemble_lane_matrix.py
+```
+
+Read first: [SUMMARY-lane-matrix.md](SUMMARY-lane-matrix.md) (headline table),
+[docs/llm-loop-capability-matrix.md](docs/llm-loop-capability-matrix.md)
+(claim ↔ evidence map), [FAILURES.md](FAILURES.md) (what each lane refused
+and why), [QUEUES.md](QUEUES.md) (which queue script emitted which row).
+
 ## Provenance
 
 This suite was developed **AI-assisted** (OpenFox agentic harness driving a
